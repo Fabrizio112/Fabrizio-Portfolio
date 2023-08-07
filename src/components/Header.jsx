@@ -5,6 +5,7 @@ import { useContext } from "react";
 import LanguageContext from "../context/LanguageContext";
 import ThemeContext from "../context/ThemeContext";
 import fabri from "../assets/images/fabri-r.jpg"
+import cv from "../assets/files/curriculumFabri.pdf"
 
 function Header() {
     const { Home } = useContext(PortfolioContext)
@@ -29,7 +30,7 @@ function Header() {
                     <a href="https://www.linkedin.com/in/fabri-avila/" target="_blank"><FontAwesomeIcon size="2x" icon={faLinkedin} style={themeLight ? { color: "#00000082" } : { color: "#ffffff5e" }} className={themeLight ? "hover-light" : "hover-dark"} /></a>
                 </section>
                 <section id="header-buttons" >
-                    <a className={themeLight ? "button-light" : "button-dark"} href="">{english ? button : "Descargar Curriculum"}</a>
+                    <a target="_blank" href={cv} download="Curriculum Vitae- Fabrizio Avila" className={themeLight ? "button-light" : "button-dark"}>{english ? button : "Descargar Curriculum"}</a>
                 </section>
             </main >
         </header >);
