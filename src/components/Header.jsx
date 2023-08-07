@@ -26,7 +26,7 @@ function Header() {
                 <p className={themeLight === true ? "color-parrafo-light" : "color-parrafo-dark"} dangerouslySetInnerHTML={{ __html: english ? description : descripcion }} />
                 <section id="header-social_media" className="">
                     <a href="https://www.github.com/fabrizio112" target="_blank"><FontAwesomeIcon size="2x" icon={faGithub} style={themeLight ? { color: "#00000082" } : { color: "#ffffff5e" }} className={themeLight ? "hover-light" : "hover-dark"} /></a>
-                    <a href="https://www.linkedin.com/fabrizio-avila" target="_blank"><FontAwesomeIcon size="2x" icon={faLinkedin} style={themeLight ? { color: "#00000082" } : { color: "#ffffff5e" }} className={themeLight ? "hover-light" : "hover-dark"} /></a>
+                    <a href="https://www.linkedin.com/in/fabri-avila/" target="_blank"><FontAwesomeIcon size="2x" icon={faLinkedin} style={themeLight ? { color: "#00000082" } : { color: "#ffffff5e" }} className={themeLight ? "hover-light" : "hover-dark"} /></a>
                 </section>
                 <section id="header-buttons" >
                     <a className={themeLight ? "button-light" : "button-dark"} href="">{english ? button : "Descargar Curriculum"}</a>
