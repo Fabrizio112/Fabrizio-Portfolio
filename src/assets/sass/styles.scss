@@ -1,0 +1,15 @@
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@import "general";
+@import "navbar";
+@import "header";
+@import "tech-stack";
+@import "projects";
+@import "contact";
+@import "footer";
+@import "mediaqueries"

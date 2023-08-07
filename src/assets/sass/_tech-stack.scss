@@ -1,0 +1,30 @@
+#tech-stack {
+    width: 100%;
+    height: 60vh;
+
+    #tech-stack_technologies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        place-items: center;
+
+        #tech-card-dark {
+            width: 100px;
+            height: 100px;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px white;
+            @include flex(column, center, center);
+            gap: 5px;
+        }
+
+        #tech-card-light {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px black;
+            @include flex(column, center, center);
+            gap: 5px;
+        }
+    }
+}

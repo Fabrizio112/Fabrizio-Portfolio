@@ -1,0 +1,29 @@
+nav {
+    height: 15vh;
+    width: 100%;
+
+    section {
+        height: 100%;
+        @include flex(row, space-between, center);
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            @include flex(row, space-between, center);
+            gap: 3rem;
+            list-style: none;
+
+            li {
+                a {
+                    text-decoration: none;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
