@@ -1,7 +1,7 @@
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
-import LanguageContext from "../context/LanguageContext";
+import LanguageContext from "../../context/LanguageContext";
 
 function ChangeLanguage() {
     const { handleLanguage } = useContext(LanguageContext)

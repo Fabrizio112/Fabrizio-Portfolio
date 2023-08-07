@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import PortfolioContext from "../context/PortfolioContext";
-import LanguageContext from "../context/LanguageContext";
-import ThemeContext from "../context/ThemeContext";
+import PortfolioContext from "../../context/PortfolioContext";
+import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
 import ChangeLanguage from "./ChangeLanguage";
 import ChangeTheme from "./ChangeTheme";
 

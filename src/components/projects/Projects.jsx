@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ProjectCard from "./ProjectCard";
-import PortfolioContext from "../context/PortfolioContext";
-import LanguageContext from "../context/LanguageContext";
+import PortfolioContext from "../../context/PortfolioContext";
+import LanguageContext from "../../context/LanguageContext";
 
 function Projects() {
     const { Projects, projectsData } = useContext(PortfolioContext)

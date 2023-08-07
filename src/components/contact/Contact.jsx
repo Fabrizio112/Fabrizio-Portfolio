@@ -1,13 +1,14 @@
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot, faPhone, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext, useState } from "react";
-import PortfolioContext from "../context/PortfolioContext";
-import LanguageContext from "../context/LanguageContext";
-import ThemeContext from "../context/ThemeContext";
+import { useContext, useRef, useState } from "react";
+import PortfolioContext from "../../context/PortfolioContext";
+import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
+
 
 function Contact() {
-    const { Contact } = useContext(PortfolioContext)
+    const { Contact, setMessageForm, messageForm, setIsModalOpen } = useContext(PortfolioContext)
     const { english, languageDictionary } = useContext(LanguageContext)
     const { title, title2, subtitle, email, location, phone, inputName, inputEmail, inputMessage, inputAffair, button, errorName, errorEmail, errorAffair, errorComments } = languageDictionary.contact
     const { themeLight } = useContext(ThemeContext)
@@ -21,7 +22,7 @@ function Contact() {
     }
     const [form, setForm] = useState(initialForm)
     const [error, setError] = useState(initialError)
-    const [messageForm, setMessageForm] = useState("")
+
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -112,6 +113,43 @@ function Contact() {
         }
 
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (error.name || error.affair || error.comments || error.email) {
+            return
+        } else {
+            fetch("https://formsubmit.co/ajax/fabri.avila3@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: form.name,
+                    email: form.email,
+                    affair: form.affair,
+                    comments: form.comments
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(messageForm)
+                    setMessageForm(data.message)
+                    setIsModalOpen(true)
+                    setTimeout(() => {
+                        setForm(initialError)
+                        setIsModalOpen(false)
+                    }, 3000);
+
+                })
+                .catch(error => console.log(error));
+        }
+
+
+
+
+    }
     return (
         <section id="contact" ref={Contact}>
             <div id="contact-title">
@@ -142,16 +180,16 @@ function Contact() {
                         </div>
                     </div>
                 </section>
-                <form id="contact-form">
-                    <input type="text" placeholder={english ? inputName : "Nombre"} name="name" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.name} />
+                <form id="contact-form" onSubmit={handleSubmit}>
+                    <input type="text" placeholder={english ? inputName : "Nombre"} name="name" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.name} required />
                     {error.name === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} />  {english ? errorName : "Este campo solo admite letras"}</p>}
-                    <input type="email" placeholder={english ? inputEmail : "Correo Electrónico"} name="email" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.email} />
+                    <input type="email" placeholder={english ? inputEmail : "Correo Electrónico"} name="email" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.email} required />
                     {error.email === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorEmail : "Ingrese un email valido"}</p>}
-                    <input type="text" placeholder={english ? inputAffair : "Asunto"} name="affair" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.affair} />
+                    <input type="text" placeholder={english ? inputAffair : "Asunto"} name="affair" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.affair} required />
                     {error.affair === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorAffair : "Ingrese un Asunto Valido"}</p>}
-                    <textarea cols="30" rows="10" name="comments" placeholder={english ? inputMessage : "Mensaje"} className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.comments}></textarea>
+                    <textarea cols="30" rows="10" name="comments" placeholder={english ? inputMessage : "Mensaje"} className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.comments} required></textarea>
                     {error.comments === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorComments : "El comentario no puede tener mas de 255 caracteres"}</p>}
-                    <button className={themeLight ? "button-light" : "button-dark"} > {english ? button : "Enviar"}</button>
+                    <button className={themeLight ? "button-light" : "button-dark"} type="submit"> {english ? button : "Enviar"}</button>
                 </form>
             </div>
 

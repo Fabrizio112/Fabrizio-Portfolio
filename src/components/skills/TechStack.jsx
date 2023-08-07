@@ -1,9 +1,9 @@
 import { faBootstrap, faCss3Alt, faGitAlt, faGithub, faHtml5, faJs, faPython, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
 import TechCard from "./TechCard";
 import { useContext } from "react";
-import PortfolioContext from "../context/PortfolioContext";
-import LanguageContext from "../context/LanguageContext";
-import ThemeContext from "../context/ThemeContext";
+import PortfolioContext from "../../context/PortfolioContext";
+import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
 
 function TechStack() {
     const { Skill } = useContext(PortfolioContext)

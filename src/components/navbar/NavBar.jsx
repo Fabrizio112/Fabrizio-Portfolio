@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import PortfolioContext from "../context/PortfolioContext";
-import LanguageContext from "../context/LanguageContext";
-import ThemeContext from "../context/ThemeContext";
+import PortfolioContext from "../../context/PortfolioContext";
+import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ChangeLanguage from "./ChangeLanguage";

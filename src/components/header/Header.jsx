@@ -1,11 +1,11 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PortfolioContext from "../context/PortfolioContext";
+import PortfolioContext from "../../context/PortfolioContext";
 import { useContext } from "react";
-import LanguageContext from "../context/LanguageContext";
-import ThemeContext from "../context/ThemeContext";
-import fabri from "../assets/images/fabri-r.jpg"
-import cv from "../assets/files/curriculumFabri.pdf"
+import LanguageContext from "../../context/LanguageContext";
+import ThemeContext from "../../context/ThemeContext";
+import fabri from "../../assets/images/fabri-r.jpg"
+import cv from "../../assets/files/curriculumFabri.pdf"
 
 function Header() {
     const { Home } = useContext(PortfolioContext)

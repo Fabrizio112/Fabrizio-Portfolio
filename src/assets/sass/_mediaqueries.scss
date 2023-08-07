@@ -67,6 +67,12 @@
         }
     }
 
+    .modal {
+        .modal_container {
+            width: 350px !important;
+        }
+    }
+
     .menu {
         display: flex;
         cursor: pointer;

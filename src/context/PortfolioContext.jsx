@@ -169,7 +169,10 @@ const PortfolioProvider = ({ children }) => {
             document.querySelector("body").style.overflow = "hidden"
         }
     }
-    const data = { Home, Projects, Skill, Contact, NavBar, projectsData, handleClick, menuClick, handleMenuClick }
+    const [messageForm, setMessageForm] = useState("")
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    isModalOpen === true ? document.querySelector("body").style.overflow = "hidden" : document.querySelector("body").style.overflow = "visible"
+    const data = { Home, Projects, Skill, Contact, NavBar, projectsData, handleClick, menuClick, handleMenuClick, messageForm, setMessageForm, isModalOpen, setIsModalOpen }
     return (<PortfolioContext.Provider value={data}>{children}</PortfolioContext.Provider>)
 }
 
