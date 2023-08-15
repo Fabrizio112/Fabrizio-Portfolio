@@ -62,6 +62,9 @@ const LanguageProvider = ({ children }) => {
             errorEmail: "Enter a valid email",
             errorAffair: "Enter a valid affair",
             errorComments: "Comments haven´t contain more than 255 characters"
+        },
+        send: {
+            success: "The form was submit successfully "
         }
 
     }
