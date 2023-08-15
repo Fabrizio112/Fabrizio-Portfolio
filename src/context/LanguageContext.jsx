@@ -30,8 +30,8 @@ const LanguageProvider = ({ children }) => {
                     description: "Food app that contains diferent categories and into that categories ,have different foods also can see information about each food",
                 },
                 2: {
-                    title: "Pokedex React",
-                    description: "Pokedex where the pokemons was categorized by generations or Regions also can see information about each Pokemon",
+                    title: "Fabri Games",
+                    description: "Pages that contains different classic games maked by me",
                 },
                 3: {
                     title: "Weather App",

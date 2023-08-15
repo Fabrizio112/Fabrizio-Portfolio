@@ -134,7 +134,6 @@ function Contact() {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(messageForm)
                     setMessageForm(data.message)
                     setIsModalOpen(true)
                     setTimeout(() => {
@@ -143,7 +142,7 @@ function Contact() {
                     }, 3000);
 
                 })
-                .catch(error => console.log(error));
+                .catch(error => console.error(error));
         }
 
 

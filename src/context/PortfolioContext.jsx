@@ -1,6 +1,6 @@
 import { createContext, useRef, useState } from "react";
 import food from "../assets/images/food-page.png"
-import pokedex from "../assets/images/pokedex.png"
+import games from "../assets/images/fabri-games.png"
 import weather from "../assets/images/weather-app-one.png"
 import translate from "../assets/images/Translate-app.png"
 console.log(food)
@@ -56,11 +56,11 @@ const PortfolioProvider = ({ children }) => {
             ]
         },
         2: {
-            title: "Pokedex React",
-            description: "Pokedex en donde los pokemones estan categorizados por generaciones  y se puede ver la información de cada pokemons",
-            github: "https://github.com/Fabrizio112/Pokedex-React",
-            link: "https://fabrizio-pokedex.netlify.app/",
-            image: pokedex,
+            title: "Fabri Juegos",
+            description: "Pagina donde se encuentran diferentes juegos realizados por mi ",
+            github: "https://github.com/Fabrizio112/Games",
+            link: "https://fabri-games.netlify.app/",
+            image: games,
             technologies: [
                 {
                     text: "HTML",
@@ -83,12 +83,8 @@ const PortfolioProvider = ({ children }) => {
                     id: 4
                 },
                 {
-                    text: "Context Api",
-                    id: 5
-                },
-                {
                     text: "React Router",
-                    id: 6
+                    id: 5
                 }
             ]
         },

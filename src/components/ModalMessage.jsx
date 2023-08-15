@@ -9,7 +9,6 @@ function ModalMessage() {
     const { isModalOpen, setIsModalOpen, messageForm } = useContext(PortfolioContext)
     const { themeLight } = useContext(ThemeContext)
     const { english } = useContext(LanguageContext)
-    console.log(messageForm)
     return (<section className={`modal  ${isModalOpen === true && "is-open"} ${themeLight === true ? "modal-light" : "modal-dark"}`}>
         <div className={`modal_container`}>
             <FontAwesomeIcon className="close-modal" size="2x" onClick={() => setIsModalOpen(false)} icon={faXmark} />
