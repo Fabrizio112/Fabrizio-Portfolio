@@ -34,12 +34,12 @@ const LanguageProvider = ({ children }) => {
                     description: "Pages that contains different classic games maked by me",
                 },
                 3: {
-                    title: "Weather App",
-                    description: "Weather app that when user searchs anywhere in the world can be know it weather",
+                    title: "Smart Shopping",
+                    description: "Ecommerce with different and varied products",
                 },
                 4: {
-                    title: "Translate App",
-                    description: "Translate app that user selects language source and language target ,writes the text that wants translate and automatic text will translate",
+                    title: "Currencies App",
+                    description: "App of currencies that can compare and convert currencies",
                 }
             }
         },

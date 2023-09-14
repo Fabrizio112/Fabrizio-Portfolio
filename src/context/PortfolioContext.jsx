@@ -1,9 +1,21 @@
 import { createContext, useRef, useState } from "react";
-import food from "../assets/images/food-page.png"
-import games from "../assets/images/fabri-games.png"
-import weather from "../assets/images/weather-app-one.png"
-import translate from "../assets/images/Translate-app.png"
-console.log(food)
+import foodD from "../assets/images/project1/foodD.png"
+import foodT from "../assets/images/project1/foodT.png"
+import foodM from "../assets/images/project1/foodM.png"
+
+import gamesD from "../assets/images/project2/gamesD.png"
+import gamesT from "../assets/images/project2/gamesT.png"
+import gamesM from "../assets/images/project2/gamesM.png"
+
+
+import ecommerceD from "../assets/images/project3/ecommerceD.png"
+import ecommerceT from "../assets/images/project3/ecommerceT.png"
+import ecommerceM from "../assets/images/project3/ecommerceM.png"
+
+import divisasD from "../assets/images/project4/divisasD.png"
+import divisasT from "../assets/images/project4/divisasT.png"
+import divisasM from "../assets/images/project4/divisasM.png"
+
 const PortfolioContext = createContext()
 
 const PortfolioProvider = ({ children }) => {
@@ -19,7 +31,9 @@ const PortfolioProvider = ({ children }) => {
             description: "Aplicación de comida que posee diferentes categories y dentro de cada categoria hay variedad de alimentos . Se puede ver la diferente información de cada alimento",
             github: "https://github.com/Fabrizio112/Meal-project",
             link: "https://meal-app-f.netlify.app",
-            image: food,
+            imageD: foodD,
+            imageT: foodT,
+            imageM: foodM,
             technologies: [
                 {
                     text: "HTML",
@@ -60,7 +74,9 @@ const PortfolioProvider = ({ children }) => {
             description: "Pagina donde se encuentran diferentes juegos realizados por mi ",
             github: "https://github.com/Fabrizio112/Games",
             link: "https://fabri-games.netlify.app/",
-            image: games,
+            imageD: gamesD,
+            imageT: gamesT,
+            imageM: gamesM,
             technologies: [
                 {
                     text: "HTML",
@@ -89,11 +105,13 @@ const PortfolioProvider = ({ children }) => {
             ]
         },
         3: {
-            title: "Aplicacion del Clima",
-            description: "Aplicacion del clima en la cual se puede buscar cualquier lugar del mundo y ver su clima",
-            github: "https://github.com/Fabrizio112/Weather-React",
-            link: "https://weather-app-fabri.netlify.app/",
-            image: weather,
+            title: "Smart Shopping",
+            description: "Ecommerce de Productos Variados",
+            github: "https://github.com/Fabrizio112/smart-shopping",
+            link: "https://smart-shopping-dev.netlify.app",
+            imageD: ecommerceD,
+            imageT: ecommerceT,
+            imageM: ecommerceM,
             technologies: [
                 {
                     text: "HTML",
@@ -114,15 +132,21 @@ const PortfolioProvider = ({ children }) => {
                 {
                     text: "Sass",
                     id: 4
+                },
+                {
+                    text: "React Router",
+                    id: 5
                 }
             ]
         },
         4: {
-            title: "Traductor",
-            description: "Traductor en el cual se elige el lenguage a traducir y el lenguage al cual se quiere realizar la traduccion , luego se escribe lo que se quiere traducir y automaticamente se traduce",
-            github: "https://github.com/Fabrizio112/translate-react",
-            link: "https://translate-app-fabri.netlify.app/",
-            image: translate,
+            title: "Calcular y Comparar Divisas",
+            description: "Aplicacion la cual se pueden comparar divisas y calcularlas",
+            github: "https://github.com/Fabrizio112/Divisas",
+            link: "https://divisas-currencies.netlify.app/",
+            imageD: divisasD,
+            imageT: divisasT,
+            imageM: divisasM,
             technologies: [
                 {
                     text: "HTML",
@@ -145,8 +169,20 @@ const PortfolioProvider = ({ children }) => {
                     id: 4
                 },
                 {
-                    text: "Context Api",
+                    text: "React Router",
                     id: 5
+                },
+                {
+                    text: "React Redux",
+                    id: 6
+                },
+                {
+                    text: "React Query",
+                    id: 7
+                },
+                {
+                    text: "Bootstrap",
+                    id: 8
                 }
             ]
         }

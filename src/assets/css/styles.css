@@ -100,7 +100,7 @@ h4 {
 }
 
 .hover-img-light:hover img {
-  filter: blur(2px);
+  filter: opacity(0.2) blur(2px);
 }
 
 .btn-project {
