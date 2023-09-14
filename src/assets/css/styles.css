@@ -280,16 +280,21 @@ header #header-container #header-buttons a:hover {
 
 #tech-stack {
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #tech-stack #tech-stack_technologies {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   place-items: center;
+  gap: 1rem;
 }
 #tech-stack #tech-stack_technologies #tech-card-dark {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: 1px solid white;
   border-radius: 10px;
   box-shadow: 0px 0px 3px white;
@@ -299,9 +304,12 @@ header #header-container #header-buttons a:hover {
   align-items: center;
   gap: 5px;
 }
+#tech-stack #tech-stack_technologies #tech-card-dark span {
+  text-align: center;
+}
 #tech-stack #tech-stack_technologies #tech-card-light {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 0px 0px 3px black;
@@ -310,6 +318,9 @@ header #header-container #header-buttons a:hover {
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+#tech-stack #tech-stack_technologies #tech-card-light span {
+  text-align: center;
 }
 
 #projects {
@@ -484,7 +495,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
   #tech-stack {
-    height: 80vh;
+    min-height: 80vh;
+    margin-bottom: 4rem;
   }
   #menu ul {
     height: 12%;
