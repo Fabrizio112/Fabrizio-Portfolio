@@ -492,7 +492,13 @@ footer {
     width: 100%;
   }
   #projects #projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  #projects #projects-container #project-card #project-card_description #project-card_description_information #project-card_description_information_techs {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+  .btn-project {
+    width: 90px;
   }
   #tech-stack {
     min-height: 80vh;
