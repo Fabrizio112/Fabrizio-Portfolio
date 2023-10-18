@@ -13,10 +13,10 @@ function MenuDesplegable() {
 
     return (<section id="menu" style={themeLight ? { backgroundColor: "white" } : { backgroundColor: "#0c1022" }}>
         <ul>
-            <li className={themeLight ? "menu-hover-dark" : "menu-hover-light"} > <a onClick={() => { handleClick(0), handleMenuClick() }}>{english ? button1 : "Inicio"}</a></li>
-            <li className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a onClick={() => { handleClick(700), handleMenuClick() }}>{english ? button2 : "Proyectos"}</a></li>
-            <li className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a onClick={() => { handleClick(2800), handleMenuClick() }}>{english ? button3 : "Habilidades"}</a></li>
-            <li className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a onClick={() => { handleClick(3450), handleMenuClick() }}>{english ? button4 : "Contacto"}</a></li>
+            <li onClick={() => { handleClick(0), handleMenuClick() }} className={themeLight ? "menu-hover-dark" : "menu-hover-light"} > <a>{english ? button1 : "Inicio"}</a></li>
+            <li onClick={() => { handleClick(700), handleMenuClick() }} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a >{english ? button2 : "Proyectos"}</a></li>
+            <li onClick={() => { handleClick(2800), handleMenuClick() }} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a>{english ? button3 : "Habilidades"}</a></li>
+            <li onClick={() => { handleClick(3450), handleMenuClick() }} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a>{english ? button4 : "Contacto"}</a></li>
             <div>
                 <div> <ChangeLanguage /></div>
                 <div><ChangeTheme /></div>
