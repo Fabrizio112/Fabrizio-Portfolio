@@ -23,7 +23,7 @@ function Header() {
             </div>
             <main id="header-container" className="">
                 <h1>{english ? title : "Hola, soy"} <span id="span-title"> Fabrizio 👋</span></h1>
-                <h2>{english ? subtitle : "Desarrollador Frontend Trainee"}</h2>
+                <h2>{english ? subtitle : "Desarrollador Frontend "}</h2>
                 <p className={themeLight === true ? "color-parrafo-light" : "color-parrafo-dark"} dangerouslySetInnerHTML={{ __html: english ? description : descripcion }} />
                 <section id="header-social_media" className="">
                     <a href="https://www.github.com/fabrizio112" target="_blank"><FontAwesomeIcon size="2x" icon={faGithub} style={themeLight ? { color: "#00000082" } : { color: "#ffffff5e" }} className={themeLight ? "hover-light" : "hover-dark"} /></a>
