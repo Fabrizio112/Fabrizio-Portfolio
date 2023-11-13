@@ -6,8 +6,19 @@ nav {
         height: 100%;
         @include flex(row, space-between, center);
 
-        a {
+        a,
+        #logo {
             text-decoration: none;
+        }
+
+        #logo:hover {
+            font-weight: 900;
+            transform: scale(1.1);
+        }
+
+        #logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5rem
         }
 
         ul {
@@ -21,9 +32,16 @@ nav {
 
                     &:hover {
                         cursor: pointer;
+                        font-weight: 900;
                     }
                 }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
             }
+
+
         }
     }
 }

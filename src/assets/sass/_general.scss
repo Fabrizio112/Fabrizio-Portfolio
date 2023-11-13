@@ -169,10 +169,14 @@ h4 {
 
 .menu-hover-light:hover {
     background-color: #ffffff5e;
+    font-weight: 900;
+    transform: scale(1.2);
 }
 
 .menu-hover-dark:hover {
     background-color: #00000082;
+    font-weight: 900;
+    transform: scale(1.2);
 }
 
 .hover:hover {
@@ -201,4 +205,8 @@ h4 {
 
 .icon-nav {
     width: 35px;
+}
+
+.icon-nav:hover {
+    transform: scale(1.2);
 }

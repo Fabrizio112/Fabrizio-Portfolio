@@ -16,7 +16,7 @@ function NavBar() {
 
     return (<nav>
         <section ref={NavBar} className={themeLight ? "light" : ""}>
-            <a href="" style={themeLight ? { color: "black" } : { color: "white" }}>&lt;fabri.dev/&gt;</a>
+            <a href="" id="logo" style={themeLight ? { color: "black" } : { color: "white" }}>&lt;fabri.dev/&gt;</a>
             <ul>
                 <li><a onClick={() => handleClick(0)}>{english ? button1 : "Inicio"}</a></li>
                 <li><a onClick={() => handleClick(600)}>{english ? button2 : "Proyectos"}</a></li>
@@ -32,5 +32,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-// Agregar 2 botones de switch ,uno para cambiar el idioma y otro para cambiar el modo oscuro

@@ -154,10 +154,14 @@ h4 {
 
 .menu-hover-light:hover {
   background-color: rgba(255, 255, 255, 0.368627451);
+  font-weight: 900;
+  transform: scale(1.2);
 }
 
 .menu-hover-dark:hover {
   background-color: rgba(0, 0, 0, 0.5098039216);
+  font-weight: 900;
+  transform: scale(1.2);
 }
 
 .hover:hover {
@@ -188,6 +192,10 @@ h4 {
   width: 35px;
 }
 
+.icon-nav:hover {
+  transform: scale(1.2);
+}
+
 nav {
   height: 15vh;
   width: 100%;
@@ -199,8 +207,17 @@ nav section {
   justify-content: space-between;
   align-items: center;
 }
-nav section a {
+nav section a,
+nav section #logo {
   text-decoration: none;
+}
+nav section #logo:hover {
+  font-weight: 900;
+  transform: scale(1.1);
+}
+nav section #logo {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
 }
 nav section ul {
   display: flex;
@@ -215,6 +232,10 @@ nav section ul li a {
 }
 nav section ul li a:hover {
   cursor: pointer;
+  font-weight: 900;
+}
+nav section ul li:hover {
+  transform: scale(1.2);
 }
 
 header {

@@ -201,7 +201,7 @@ const PortfolioProvider = ({ children }) => {
             document.querySelector("body").style.overflow = "hidden"
         }
     }
-    const [messageForm, setMessageForm] = useState("")
+    const [messageForm, setMessageForm] = useState("El formulario se envio correctamente")
     const [isModalOpen, setIsModalOpen] = useState(false)
 
     const data = { Home, Projects, Skill, Contact, NavBar, projectsData, handleClick, menuClick, handleMenuClick, messageForm, setMessageForm, isModalOpen, setIsModalOpen }

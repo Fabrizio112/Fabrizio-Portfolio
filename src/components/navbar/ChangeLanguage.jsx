@@ -5,7 +5,7 @@ import LanguageContext from "../../context/LanguageContext";
 
 function ChangeLanguage() {
     const { handleLanguage } = useContext(LanguageContext)
-    return (<FontAwesomeIcon onClick={handleLanguage} className="hover" size="2x" icon={faGlobe} />);
+    return (<FontAwesomeIcon onClick={handleLanguage} className="hover icon-nav" size="2x" icon={faGlobe} />);
 }
 
 export default ChangeLanguage;

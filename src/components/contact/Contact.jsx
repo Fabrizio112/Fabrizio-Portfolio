@@ -119,7 +119,7 @@ function Contact() {
         if (error.name || error.affair || error.comments || error.email) {
             return
         } else {
-            fetch("https://formsubmit.co/ajax/fabri.avila3@gmail.com", {
+            /* fetch("https://formsubmit.co/ajax/fabri.avila3@gmail.com", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
@@ -133,16 +133,15 @@ function Contact() {
                 })
             })
                 .then(response => response.json())
-                .then(data => {
-                    setMessageForm(data.message)
-                    setIsModalOpen(true)
-                    setTimeout(() => {
-                        setForm(initialError)
-                        setIsModalOpen(false)
-                    }, 3000);
+                .then(data => { */
+            setIsModalOpen(true)
+            setTimeout(() => {
+                setForm(initialError)
+                setIsModalOpen(false)
+            }, 3000);
 
-                })
-                .catch(error => console.error(error));
+            /*   
+              .catch (error => console.error(error)); */
         }
 
 
