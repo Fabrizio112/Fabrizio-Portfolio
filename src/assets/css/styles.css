@@ -229,10 +229,27 @@ nav section ul {
 }
 nav section ul li a {
   text-decoration: none;
+  position: relative;
+}
+nav section ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  z-index: 1;
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
 nav section ul li a:hover {
   cursor: pointer;
   font-weight: 900;
+}
+nav section ul li a:hover::before {
+  transform: scale(1);
 }
 nav section ul li:hover {
   transform: scale(1.2);
