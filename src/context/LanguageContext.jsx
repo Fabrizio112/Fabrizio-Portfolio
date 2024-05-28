@@ -17,8 +17,8 @@ const LanguageProvider = ({ children }) => {
         },
         header: {
             title: "Hello, I´m",
-            subtitle: "Frontend Developer",
-            description: `Effort and Consistency are my strengths <br /> Self taught developer that is looking for an opportunity to gain experience in the software development . Always  willing to face challenges and proofs. Enjoy facing my limits and learn new technologies. Curiosity and versatility are the fuel for learning more day to day <br /> My two passions : Technology and Sports . I love Football. 
+            subtitle: "FullStack Developer",
+            description: `Effort and Consistency are my strengths <br /> Software Development Technicature Student and Self taught developer that is looking for an opportunity to gain experience and grow my technical and soft skills . Always  willing to face challenges and proofs. Enjoy facing my limits and learn new technologies. Curiosity and versatility are the fuel for learning more day to day <br /> My two passions : Technology and Sports .<br/> I love Football. 
             `,
             button: "Download Resume"
         },
