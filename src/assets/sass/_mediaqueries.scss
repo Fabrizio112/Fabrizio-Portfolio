@@ -9,9 +9,12 @@
 
     #header {
         flex-direction: column;
-
+        margin-top: 15px;
         h1 {
             font-size: 2.5rem;
+            width: 100%;
+            text-align: center;
+            margin: 1rem 0;
 
             span {
                 font-size: 2.8rem;
@@ -25,12 +28,17 @@
             #header-buttons {
                 width: 100%;
             }
+            #header-social_media{
+                justify-content: center;
+            }
         }
     }
 
     #contact {
         height: auto;
-
+        #contact-title{
+            text-align: center;
+        }
         #contact-container {
             flex-direction: column;
 
@@ -51,6 +59,10 @@
     }
 
     #projects {
+        h4{
+            width: 100%;
+            text-align: center;
+        }
         #projects-container {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
@@ -73,11 +85,15 @@
     #tech-stack {
         min-height: 80vh;
         margin-bottom: 4rem;
+        h3{
+            width: 100%;
+            text-align: center;
+        }
     }
 
     #menu {
         ul {
-            height: 12%;
+            height: 10%;
             font-size: 1.5rem;
         }
     }
@@ -91,5 +107,13 @@
     .menu {
         display: flex;
         cursor: pointer;
+    }
+}
+
+@media(max-width:500px){
+    #header{
+        div{
+            max-width: 300px;
+        }
     }
 }

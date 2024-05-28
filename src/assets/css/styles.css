@@ -266,8 +266,8 @@ header {
   gap: 2rem;
 }
 header div {
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
 }
 header div img {
   width: 100%;
@@ -506,9 +506,13 @@ footer {
   }
   #header {
     flex-direction: column;
+    margin-top: 15px;
   }
   #header h1 {
     font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
   }
   #header h1 span {
     font-size: 2.8rem;
@@ -520,8 +524,14 @@ footer {
   #header main #header-buttons {
     width: 100%;
   }
+  #header main #header-social_media {
+    justify-content: center;
+  }
   #contact {
     height: auto;
+  }
+  #contact #contact-title {
+    text-align: center;
   }
   #contact #contact-container {
     flex-direction: column;
@@ -537,6 +547,10 @@ footer {
   #contact #contact-container #contact-form button {
     width: 100%;
   }
+  #projects h4 {
+    width: 100%;
+    text-align: center;
+  }
   #projects #projects-container {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
@@ -550,8 +564,12 @@ footer {
     min-height: 80vh;
     margin-bottom: 4rem;
   }
+  #tech-stack h3 {
+    width: 100%;
+    text-align: center;
+  }
   #menu ul {
-    height: 12%;
+    height: 10%;
     font-size: 1.5rem;
   }
   .modal .modal_container {
@@ -560,6 +578,11 @@ footer {
   .menu {
     display: flex;
     cursor: pointer;
+  }
+}
+@media (max-width: 500px) {
+  #header div {
+    max-width: 300px;
   }
 }
 .modal {
