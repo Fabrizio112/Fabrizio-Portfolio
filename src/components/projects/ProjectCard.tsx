@@ -5,9 +5,16 @@ import { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 import ProjectTechButton from "./ProjectTechButton";
 
+type ProjectCardProps={
+    github:string
+    link:string
+    title:string
+    description:string
+    image:string
+    technologies:{text:string,id:number}[]
+}
 
-
-function ProjectCard({ github, link, title, description, image, technologies }) {
+function ProjectCard({ github, link, title, description, image, technologies }:ProjectCardProps) {
     const { themeLight } = useContext(ThemeContext)
     return (
         <section className={themeLight ? "hover-img-light" : "hover-img-dark"} id="project-card">

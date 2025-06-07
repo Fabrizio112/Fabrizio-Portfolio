@@ -8,7 +8,7 @@ import ThemeContext from "../../context/ThemeContext";
 
 
 function Contact() {
-    const { Contact, setMessageForm, messageForm, setIsModalOpen } = useContext(PortfolioContext)
+    const { Contact, setIsModalOpen } = useContext(PortfolioContext)
     const { english, languageDictionary } = useContext(LanguageContext)
     const { title, title2, subtitle, email, location, phone, inputName, inputEmail, inputMessage, inputAffair, button, errorName, errorEmail, errorAffair, errorComments } = languageDictionary.contact
     const { themeLight } = useContext(ThemeContext)

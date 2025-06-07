@@ -1,4 +1,4 @@
-import { createContext, useRef, useState } from "react";
+import { createContext, ReactNode, useRef, useState } from "react";
 import foodD from "../assets/images/project1/foodD.png"
 import foodT from "../assets/images/project1/foodT.png"
 import foodM from "../assets/images/project1/foodM.png"
@@ -16,15 +16,39 @@ import divisasD from "../assets/images/project4/divisasD.png"
 import divisasT from "../assets/images/project4/divisasT.png"
 import divisasM from "../assets/images/project4/divisasM.png"
 
-const PortfolioContext = createContext()
+//A este hay que cambiarlo completo por Redux o Zustand
 
-const PortfolioProvider = ({ children }) => {
-    const Home = useRef()
-    const Projects = useRef()
-    const Skill = useRef()
-    const Contact = useRef()
 
-    const NavBar = useRef()
+type PortfolioContextProps={
+    Home:React.MutableRefObject<HTMLElement | null>
+    Projects:React.MutableRefObject<HTMLElement | null>
+    Skill:React.MutableRefObject<HTMLElement | null>
+    Contact:React.MutableRefObject<HTMLElement | null>
+    NavBar:React.MutableRefObject<HTMLElement | null>
+    //Falta la prop de projectsData
+    handleClick:(arg:number)=> void
+    menuClick:boolean
+    handleMenuClick:()=> void
+    messageForm:string
+    setMessageForm:()=>void
+    isModalOpen:boolean
+    setIsModalOpen:()=>void
+}
+
+const PortfolioContext = createContext<PortfolioContextProps>(null!)
+
+
+type PortfolioProviderType={
+    children:ReactNode
+}
+
+const PortfolioProvider = ({ children }:PortfolioProviderType) => {
+    const Home = useRef<HTMLElement|null>(null)
+    const Projects = useRef<HTMLElement|null>(null)
+    const Skill = useRef<HTMLElement|null>(null)
+    const Contact = useRef<HTMLElement|null>(null)
+
+    const NavBar = useRef<HTMLElement|null>(null)
     const projectsData = {
         1: {
             title: "Aplicación de Comida",
@@ -187,7 +211,7 @@ const PortfolioProvider = ({ children }) => {
             ]
         }
     }
-    const handleClick = (distancia) => {
+    const handleClick = (distancia : number) => {
         window.scrollTo(0, distancia)
     }
 
@@ -195,10 +219,10 @@ const PortfolioProvider = ({ children }) => {
     const handleMenuClick = () => {
         if (menuClick === true) {
             setMenuClick(false)
-            document.querySelector("body").style.overflow = ""
+            document.body.style.overflow = ""
         } else {
             setMenuClick(true)
-            document.querySelector("body").style.overflow = "hidden"
+            document.body.style.overflow = "hidden"
         }
     }
     const [messageForm, setMessageForm] = useState("El formulario se envio correctamente")

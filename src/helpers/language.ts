@@ -1,14 +1,4 @@
-import { createContext, useState } from "react";
-
-const LanguageContext = createContext()
-
-const LanguageProvider = ({ children }) => {
-
-    const [english, setEnglish] = useState(false)
-    const handleLanguage = () => {
-        english ? setEnglish(false) : setEnglish(true)
-    }
-    const languageDictionary = {
+export const languageDictionary = {
         nav: {
             button1: "Home",
             button2: "Projects",
@@ -67,12 +57,6 @@ const LanguageProvider = ({ children }) => {
             success: "The form was submit successfully "
         }
 
-    }
+    } as const;
 
-    const data = { languageDictionary, handleLanguage, english }
-    return (
-        <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>
-    )
-}
-export default LanguageContext
-export { LanguageProvider }
+export type languageDictionaryType= typeof languageDictionary
