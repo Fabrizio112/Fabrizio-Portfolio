@@ -1,4 +1,3 @@
-import { createContext, ReactNode, useRef, useState } from "react";
 import foodD from "../assets/images/project1/foodD.png"
 import foodT from "../assets/images/project1/foodT.png"
 import foodM from "../assets/images/project1/foodM.png"
@@ -16,40 +15,8 @@ import divisasD from "../assets/images/project4/divisasD.png"
 import divisasT from "../assets/images/project4/divisasT.png"
 import divisasM from "../assets/images/project4/divisasM.png"
 
-//A este hay que cambiarlo completo por Redux o Zustand
 
-
-type PortfolioContextProps={
-    Home:React.MutableRefObject<HTMLElement | null>
-    Projects:React.MutableRefObject<HTMLElement | null>
-    Skill:React.MutableRefObject<HTMLElement | null>
-    Contact:React.MutableRefObject<HTMLElement | null>
-    NavBar:React.MutableRefObject<HTMLElement | null>
-    //Falta la prop de projectsData
-    handleClick:(arg:number)=> void
-    menuClick:boolean
-    handleMenuClick:()=> void
-    messageForm:string
-    setMessageForm:()=>void
-    isModalOpen:boolean
-    setIsModalOpen:()=>void
-}
-
-const PortfolioContext = createContext<PortfolioContextProps>(null!)
-
-
-type PortfolioProviderType={
-    children:ReactNode
-}
-
-const PortfolioProvider = ({ children }:PortfolioProviderType) => {
-    const Home = useRef<HTMLElement|null>(null)
-    const Projects = useRef<HTMLElement|null>(null)
-    const Skill = useRef<HTMLElement|null>(null)
-    const Contact = useRef<HTMLElement|null>(null)
-
-    const NavBar = useRef<HTMLElement|null>(null)
-    const projectsData = {
+export const projectsData = {
         1: {
             title: "Aplicación de Comida",
             description: "Aplicación de comida que posee diferentes categories y dentro de cada categoria hay variedad de alimentos . Se puede ver la diferente información de cada alimento",
@@ -210,27 +177,6 @@ const PortfolioProvider = ({ children }:PortfolioProviderType) => {
                 }
             ]
         }
-    }
-    const handleClick = (distancia : number) => {
-        window.scrollTo(0, distancia)
-    }
+    } as const;
 
-    const [menuClick, setMenuClick] = useState(false)
-    const handleMenuClick = () => {
-        if (menuClick === true) {
-            setMenuClick(false)
-            document.body.style.overflow = ""
-        } else {
-            setMenuClick(true)
-            document.body.style.overflow = "hidden"
-        }
-    }
-    const [messageForm, setMessageForm] = useState("El formulario se envio correctamente")
-    const [isModalOpen, setIsModalOpen] = useState(false)
-
-    const data = { Home, Projects, Skill, Contact, NavBar, projectsData, handleClick, menuClick, handleMenuClick, messageForm, setMessageForm, isModalOpen, setIsModalOpen }
-    return (<PortfolioContext.Provider value={data}>{children}</PortfolioContext.Provider>)
-}
-
-export default PortfolioContext;
-export { PortfolioProvider }
+export type ProjetDataType = typeof projectsData

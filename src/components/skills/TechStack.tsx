@@ -15,12 +15,11 @@ import ThemeContext from "../../context/ThemeContext";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 function TechStack() {
-    const { Skill } = useContext(PortfolioContext)
     const { english, languageDictionary } = useContext(LanguageContext)
     const { title } = languageDictionary.tech
     const { themeLight } = useContext(ThemeContext)
     return (
-        <section id="tech-stack" ref={Skill} >
+        <section id="tech-stack" >
             <h3>{english ? title : "Habilidades"}</h3>
             <section id="tech-stack_technologies" className="col">
                 <TechCard component={faGitAlt} text="Git" />

@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import PortfolioContext from "../../context/PortfolioContext";
 import LanguageContext from "../../context/LanguageContext";
+import { projectsData } from "../../helpers/project";
 
 function Projects() {
-    const { Projects, projectsData } = useContext(PortfolioContext)
     const { english, languageDictionary } = useContext(LanguageContext)
     const { title } = languageDictionary.projects
     const [tamanio, setTamanio] = useState("desktop")
@@ -18,7 +17,7 @@ function Projects() {
         }
     })
     return (
-        <section id="projects" ref={Projects} >
+        <section id="projects" >
             <h4>{english ? title : "Mis Proyectos"}</h4>
             <section id="projects-container">
                 <ProjectCard github={projectsData[1].github} link={projectsData[1].link} title={english ? languageDictionary.projects.cards[1].title : projectsData[1].title} description={english ? languageDictionary.projects.cards[1].description : projectsData[1].description} image={tamanio === "desktop" ? projectsData[1].imageD : tamanio === "tablets" ? projectsData[1].imageT : projectsData[1].imageM} technologies={projectsData[1].technologies} />

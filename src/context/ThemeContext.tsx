@@ -14,7 +14,7 @@ type ThemeProviderProps={
 const ThemeProvider = ({ children }:ThemeProviderProps) => {
     const [themeLight, setThemeLight] = useState(false)
 
-    themeLight === true ? document.querySelector("#root").classList.add("light") : document.querySelector("#root").classList.remove("light")
+    themeLight === true ? document.querySelector("#root")!.classList.add("light") : document.querySelector("#root")!.classList.remove("light")
     const handleTheme = () => {
         if (themeLight === true) {
             setThemeLight(false)

@@ -2,13 +2,14 @@ import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLocationDot, faPhone, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useRef, useState } from "react";
-import PortfolioContext from "../../context/PortfolioContext";
 import LanguageContext from "../../context/LanguageContext";
 import ThemeContext from "../../context/ThemeContext";
+import { usePortfolioStore } from "../../store/store";
 
 
 function Contact() {
-    const { Contact, setIsModalOpen } = useContext(PortfolioContext)
+    const changeModalOpen=usePortfolioStore(state=>state.changeModalOpen)
+
     const { english, languageDictionary } = useContext(LanguageContext)
     const { title, title2, subtitle, email, location, phone, inputName, inputEmail, inputMessage, inputAffair, button, errorName, errorEmail, errorAffair, errorComments } = languageDictionary.contact
     const { themeLight } = useContext(ThemeContext)
@@ -23,81 +24,82 @@ function Contact() {
     const [form, setForm] = useState(initialForm)
     const [error, setError] = useState(initialError)
 
-    const handleChange = (e) => {
+    const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
         setForm({
             ...form,
             [e.target.name]: e.target.value
         })
     }
-    const handleErrors = (e) => {
+    const handleErrors = (e:React.KeyboardEvent<HTMLInputElement>) => {
+        const target=e.target as HTMLInputElement
         let regExpName = new RegExp(/^[a-zA-Z ]+$/)
         let regExpEmail = new RegExp(/^[a-z0-9.-]{1,30}@([a-z]{1,20}\.)[a-z]{2,3}$/)
         let regExpAffair = new RegExp(/^[a-zA-Z0-9 ]+$/)
         let regExpComments = new RegExp(/^[a-zA-Z0-9 ,.-]{1,255}$/)
         if (e.target) {
-            if (e.target.value != "") {
-                switch (e.target.name) {
+            if (target.value != "") {
+                switch (target.name) {
                     case "name":
-                        if (regExpName.test(e.target.value) === false) {
+                        if (regExpName.test(target.value) === false) {
                             setError({
                                 ...error,
-                                [e.target.name]: true
+                                [`${target.name}`]: true
                             })
-                            e.target.classList.add("error-input")
+                            target.classList.add("error-input")
                         } else {
                             setError({
                                 ...error,
-                                [e.target.name]: ""
+                                [target.name]: ""
                             })
-                            e.target.classList.remove("error-input")
+                            target.classList.remove("error-input")
                         }
 
                         break;
                     case "email":
 
-                        if (regExpEmail.test(e.target.value) === false) {
+                        if (regExpEmail.test(target.value) === false) {
                             setError({
                                 ...error,
-                                [e.target.name]: true
+                                [`${target.name}`]: true
                             })
-                            e.target.classList.add("error-input")
+                            target.classList.add("error-input")
                         } else {
                             setError({
                                 ...error,
-                                [e.target.name]: ""
+                                [target.name]: ""
                             })
-                            e.target.classList.remove("error-input")
+                            target.classList.remove("error-input")
                         }
                         break;
                     case "affair":
 
-                        if (regExpAffair.test(e.target.value) === false) {
+                        if (regExpAffair.test(target.value) === false) {
                             setError({
                                 ...error,
-                                [e.target.name]: true
+                                [`${target.name}`]: true
                             })
-                            e.target.classList.add("error-input")
+                            target.classList.add("error-input")
                         } else {
                             setError({
                                 ...error,
-                                [e.target.name]: ""
+                                [target.name]: ""
                             })
-                            e.target.classList.remove("error-input")
+                            target.classList.remove("error-input")
                         }
 
                         break;
                     case "comments":
 
-                        if (regExpComments.test(e.target.value) === false) {
+                        if (regExpComments.test(target.value) === false) {
                             setError({
                                 ...error,
-                                [e.target.name]: true
+                                [`${target.name}`]: true
                             })
-                            e.target.classList.add("error-input")
+                            target.classList.add("error-input")
                         } else {
                             setError({
                                 ...error,
-                                [e.target.name]: ""
+                                [target.name]: ""
                             })
                         }
 
@@ -106,15 +108,15 @@ function Contact() {
             } else {
                 setError({
                     ...error,
-                    [e.target.name]: ""
+                    [target.name]: ""
                 })
-                e.target.classList.remove("error-input")
+                target.classList.remove("error-input")
             }
         }
 
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (error.name || error.affair || error.comments || error.email) {
             return
@@ -134,10 +136,10 @@ function Contact() {
             })
                 .then(response => response.json())
                 .then(data => { */
-            setIsModalOpen(true)
+            changeModalOpen()
             setTimeout(() => {
                 setForm(initialError)
-                setIsModalOpen(false)
+                changeModalOpen()
             }, 3000);
 
             /*   
@@ -149,7 +151,7 @@ function Contact() {
 
     }
     return (
-        <section id="contact" ref={Contact}>
+        <section id="contact">
             <div id="contact-title">
                 <h5>{english ? title : "Contacto"} <span id="contact-title">{english && title2}</span></h5>
                 <span>{english ? subtitle : "Nos mantengamos en contacto !!"}</span>
@@ -180,7 +182,7 @@ function Contact() {
                 </section>
                 <form id="contact-form" onSubmit={handleSubmit}>
                     <input type="text" placeholder={english ? inputName : "Nombre"} name="name" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.name} required />
-                    {error.name === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} />  {english ? errorName : "Este campo solo admite letras"}</p>}
+                    {error.name === true &&( <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} />  {english ? errorName : "Este campo solo admite letras"}</p>)}
                     <input type="email" placeholder={english ? inputEmail : "Correo Electrónico"} name="email" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.email} required />
                     {error.email === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorEmail : "Ingrese un email valido"}</p>}
                     <input type="text" placeholder={english ? inputAffair : "Asunto"} name="affair" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.affair} required />

@@ -1,6 +1,6 @@
 function Footer() {
     return (<footer>
-        <span>2023 Fabrizio Avila Portfolio</span>
+        <span>2025 Fabrizio Avila Portfolio</span>
     </footer>);
 }
 

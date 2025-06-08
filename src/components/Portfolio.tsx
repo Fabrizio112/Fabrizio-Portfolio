@@ -5,12 +5,11 @@ import TechStack from "./skills/TechStack"
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import MenuDesplegable from "./navbar/MenuDesplegable";
-import { useContext } from "react";
-import PortfolioContext from "../context/PortfolioContext";
 import ModalMessage from "./ModalMessage";
+import { usePortfolioStore } from "../store/store";
 
 function Portfolio() {
-    const { menuClick } = useContext(PortfolioContext)
+    const menuClick=usePortfolioStore(state=>state.menuClick)
     return (<>
         <ModalMessage />
         <div className="container">

@@ -1,6 +1,5 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PortfolioContext from "../../context/PortfolioContext";
 import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import ThemeContext from "../../context/ThemeContext";
@@ -9,16 +8,15 @@ import cv from "../../assets/files/CurriculumVitae-FabrizioAvila.pdf"
 import cvEnglish from "../../assets/files/Resume-FabrizioAvila.pdf"
 
 function Header() {
-    const { Home } = useContext(PortfolioContext)
     const { english, languageDictionary } = useContext(LanguageContext)
-    const { themeLight, handleTheme } = useContext(ThemeContext)
+    const { themeLight } = useContext(ThemeContext)
     const { button, description, subtitle, title } = languageDictionary.header
     const descripcion = `El esfuerzo y la dedicación son mis 2 fortalezas.<br/>
     Estudiante de la Tecnicatura en Desarrollo de Sofware y desarrollador autodidacta que esta buscando oportunidades para ganar experiencia y desarrollar mis habilidades/capacidades tanto tecnicas como blandas. Dispuesto siempre a enfrentar desafíos y retos. Disfruto desafiar mis limites y aprender nuevas tecnologías. La curiosidad y la versatilidad son el combustible para día a día aprenda más y más.<br/>
         Mis 2 pasiones: La Tecnología y el Deporte.<br/> Amo el Fútbol`;
 
     return (
-        <header id="header" ref={Home}>
+        <header id="header">
             <div >
                 <img  className={themeLight === true ?"imagen-portfolio-light":"imagen-portfolio-dark"} src={fabri} alt=""  />
             </div>
