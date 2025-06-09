@@ -37,21 +37,8 @@ export const languageDictionary = {
             title: "Skills"
         },
         contact: {
-            title: "Contact",
-            title2: "Me",
-            subtitle: "Get in touch",
-            phone: "Phone",
-            email: "Email",
-            location: "Location",
-            inputName: "Name",
-            inputEmail: "Email",
-            inputAffair: "Affair",
-            inputMessage: "Message",
-            button: "Send",
-            errorName: "This field can only contains letters",
-            errorEmail: "Enter a valid email",
-            errorAffair: "Enter a valid affair",
-            errorComments: "Comments haven´t contain more than 255 characters"
+            title: "Contact Me !!!",
+            subtitle: "If you wish to contact me , you can send me a message. I will be happy to answer your query",
         },
         send: {
             success: "The form was submit successfully "

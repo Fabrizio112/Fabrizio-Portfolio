@@ -1,199 +1,48 @@
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faLocationDot, faPhone, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext, useRef, useState } from "react";
+
+import { useContext} from "react";
 import LanguageContext from "../../context/LanguageContext";
 import ThemeContext from "../../context/ThemeContext";
-import { usePortfolioStore } from "../../store/store";
+import hombreSonriendo from "../../assets/images/hombre-sonriendo.webp"
 
 
 function Contact() {
-    const changeModalOpen=usePortfolioStore(state=>state.changeModalOpen)
-
     const { english, languageDictionary } = useContext(LanguageContext)
-    const { title, title2, subtitle, email, location, phone, inputName, inputEmail, inputMessage, inputAffair, button, errorName, errorEmail, errorAffair, errorComments } = languageDictionary.contact
+    const {title,subtitle}=languageDictionary.contact
     const { themeLight } = useContext(ThemeContext)
-    const initialForm = {
-    }
-    const initialError = {
-        name: "",
-        email: "",
-        affair: "",
-        comments: ""
-    }
-    const [form, setForm] = useState(initialForm)
-    const [error, setError] = useState(initialError)
-
-    const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        })
-    }
-    const handleErrors = (e:React.KeyboardEvent<HTMLInputElement>) => {
-        const target=e.target as HTMLInputElement
-        let regExpName = new RegExp(/^[a-zA-Z ]+$/)
-        let regExpEmail = new RegExp(/^[a-z0-9.-]{1,30}@([a-z]{1,20}\.)[a-z]{2,3}$/)
-        let regExpAffair = new RegExp(/^[a-zA-Z0-9 ]+$/)
-        let regExpComments = new RegExp(/^[a-zA-Z0-9 ,.-]{1,255}$/)
-        if (e.target) {
-            if (target.value != "") {
-                switch (target.name) {
-                    case "name":
-                        if (regExpName.test(target.value) === false) {
-                            setError({
-                                ...error,
-                                [`${target.name}`]: true
-                            })
-                            target.classList.add("error-input")
-                        } else {
-                            setError({
-                                ...error,
-                                [target.name]: ""
-                            })
-                            target.classList.remove("error-input")
-                        }
-
-                        break;
-                    case "email":
-
-                        if (regExpEmail.test(target.value) === false) {
-                            setError({
-                                ...error,
-                                [`${target.name}`]: true
-                            })
-                            target.classList.add("error-input")
-                        } else {
-                            setError({
-                                ...error,
-                                [target.name]: ""
-                            })
-                            target.classList.remove("error-input")
-                        }
-                        break;
-                    case "affair":
-
-                        if (regExpAffair.test(target.value) === false) {
-                            setError({
-                                ...error,
-                                [`${target.name}`]: true
-                            })
-                            target.classList.add("error-input")
-                        } else {
-                            setError({
-                                ...error,
-                                [target.name]: ""
-                            })
-                            target.classList.remove("error-input")
-                        }
-
-                        break;
-                    case "comments":
-
-                        if (regExpComments.test(target.value) === false) {
-                            setError({
-                                ...error,
-                                [`${target.name}`]: true
-                            })
-                            target.classList.add("error-input")
-                        } else {
-                            setError({
-                                ...error,
-                                [target.name]: ""
-                            })
-                        }
-
-                        break;
-                }
-            } else {
-                setError({
-                    ...error,
-                    [target.name]: ""
-                })
-                target.classList.remove("error-input")
-            }
-        }
-
-    }
-
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        if (error.name || error.affair || error.comments || error.email) {
-            return
-        } else {
-            /* fetch("https://formsubmit.co/ajax/fabri.avila3@gmail.com", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: form.name,
-                    email: form.email,
-                    affair: form.affair,
-                    comments: form.comments
-                })
-            })
-                .then(response => response.json())
-                .then(data => { */
-            changeModalOpen()
-            setTimeout(() => {
-                setForm(initialError)
-                changeModalOpen()
-            }, 3000);
-
-            /*   
-              .catch (error => console.error(error)); */
-        }
-
-
-
-
-    }
     return (
-        <section id="contact">
-            <div id="contact-title">
-                <h5>{english ? title : "Contacto"} <span id="contact-title">{english && title2}</span></h5>
-                <span>{english ? subtitle : "Nos mantengamos en contacto !!"}</span>
+     <section id="contacto" className={themeLight ? "light" : ""}>
+        <h4>{english ? title :"Contacto"}</h4>
+        <div id="contacto-container">
+            <div id="contacto-left">
+            <p>{english?subtitle :"Si deseas contactarme, puedes enviarme un mensaje. Estaré encantado de responder a tu consulta"}.</p>
+            <div id="contacto-container-rrhh">
+                <a href="mailto:fabri.avila3@gmail.com" target="_blank" className={`card-rrhh ${themeLight?"card-rrhh-light":"card-rrhh-black"} `}>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M 43.753906 6.4023438 C 42.53621 6.3489969 41.294792 6.712898 40.271484 7.46875 L 37.525391 9.4960938 L 25 18.755859 L 12.591797 9.5839844 A 1.0001 1.0001 0 0 0 11.949219 9.3007812 L 12.199219 9.3007812 L 9.734375 7.4765625 C 8.7104042 6.7188363 7.4671493 6.3528895 6.2480469 6.40625 C 5.0289444 6.4596105 3.8349462 6.9314667 2.9082031 7.8457031 C 1.7309454 9.0063798 1 10.629831 1 12.410156 L 1 15.84375 A 1.0001 1.0001 0 0 0 1 16.138672 L 1 39.5 C 1 41.421188 2.5788117 43 4.5 43 L 12 43 A 1.0001 1.0001 0 0 0 13 42 L 13 25.373047 L 24.40625 33.804688 A 1.0001 1.0001 0 0 0 25.59375 33.804688 L 37 25.373047 L 37 42 A 1.0001 1.0001 0 0 0 38 43 L 45.5 43 C 47.421188 43 49 41.421188 49 39.5 L 49 16.119141 A 1.0001 1.0001 0 0 0 49 15.859375 L 49 12.410156 C 49 10.6517 48.290455 9.0357821 47.128906 7.8730469 C 47.095336 7.8394769 47.084086 7.83018 47.097656 7.84375 A 1.0001 1.0001 0 0 0 47.091797 7.8378906 C 46.165242 6.9256756 44.971603 6.4556905 43.753906 6.4023438 z M 43.644531 8.4003906 C 44.400835 8.4300436 45.134049 8.7168876 45.689453 9.2636719 C 45.708363 9.2823439 45.722171 9.2964424 45.712891 9.2871094 C 46.50934 10.084374 47 11.188613 47 12.410156 L 47 15.496094 L 39 21.408203 L 39 11 A 1.0001 1.0001 0 0 0 38.996094 10.898438 L 41.458984 9.078125 A 1.0001 1.0001 0 0 0 41.460938 9.078125 C 42.109578 8.598977 42.888228 8.3707375 43.644531 8.4003906 z M 6.3574219 8.40625 C 7.1145694 8.37661 7.8958927 8.6037105 8.5449219 9.0839844 L 11.003906 10.902344 A 1.0001 1.0001 0 0 0 11 11 L 11 21.408203 L 3 15.496094 L 3 12.410156 C 3 11.174482 3.5017577 10.068855 4.3125 9.2695312 C 4.8677569 8.7217677 5.6002743 8.4358895 6.3574219 8.40625 z M 37 12.371094 L 37 22.886719 L 25 31.755859 L 13 22.886719 L 13 12.373047 L 24.40625 20.804688 A 1.0001 1.0001 0 0 0 25.59375 20.804688 L 37 12.371094 z M 3 17.982422 L 11 23.896484 L 11 41 L 4.5 41 C 3.6591883 41 3 40.340812 3 39.5 L 3 17.982422 z M 47 17.982422 L 47 39.5 C 47 40.340812 46.340812 41 45.5 41 L 39 41 L 39 23.896484 L 47 17.982422 z"></path>
+                    </svg>
+                    <p>fabri.avila3@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/fabri-avila/" target="_blank" className={`card-rrhh ${themeLight?"card-rrhh-light":"card-rrhh-black"} `}>
+                   <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
+                    </svg>
+                    <p>fabri-avila</p>
+                </a>
+                <a href="https://github.com/Fabrizio112" target="_blank" className={`card-rrhh ${themeLight?"card-rrhh-light":"card-rrhh-black"} `}>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                        <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
+                    </svg>
+                    <p>Fabrizio112</p>
+                </a>
             </div>
-            <div id="contact-container">
-                <section id="contact-information">
-                    <div id="contact-information_elements">
-                        <FontAwesomeIcon size="2x" icon={faEnvelope} style={themeLight ? { color: "black" } : { color: "#ffffff" }} />
-                        <div>
-                            <span>{english ? email : "Correo Electrónico"}</span>
-                            <p>fabri.avila3@gmail.com</p>
-                        </div>
-                    </div>
-                    <div id="contact-information_elements">
-                        <FontAwesomeIcon size="2x" icon={faPhone} style={themeLight ? { color: "black" } : { color: "#ffffff" }} />
-                        <div>
-                            <span>{english ? phone : "Teléfono"}</span>
-                            <p>+54 3518015488</p>
-                        </div>
-                    </div>
-                    <div id="contact-information_elements">
-                        <FontAwesomeIcon size="2x" icon={faLocationDot} style={themeLight ? { color: "black" } : { color: "#ffffff" }} />
-                        <div>
-                            <span>{english ? location : "Ubicación"}</span>
-                            <p>Córdoba , Argentina</p>
-                        </div>
-                    </div>
-                </section>
-                <form id="contact-form" onSubmit={handleSubmit}>
-                    <input type="text" placeholder={english ? inputName : "Nombre"} name="name" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.name} required />
-                    {error.name === true &&( <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} />  {english ? errorName : "Este campo solo admite letras"}</p>)}
-                    <input type="email" placeholder={english ? inputEmail : "Correo Electrónico"} name="email" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.email} required />
-                    {error.email === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorEmail : "Ingrese un email valido"}</p>}
-                    <input type="text" placeholder={english ? inputAffair : "Asunto"} name="affair" className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.affair} required />
-                    {error.affair === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorAffair : "Ingrese un Asunto Valido"}</p>}
-                    <textarea cols="30" rows="10" name="comments" placeholder={english ? inputMessage : "Mensaje"} className={themeLight ? "inputs-light" : "inputs-dark"} onKeyUp={handleErrors} onChange={handleChange} value={form.comments} required></textarea>
-                    {error.comments === true && <p className="error"><FontAwesomeIcon icon={faXmark} style={{ color: "#ff0000" }} /> {english ? errorComments : "El comentario no puede tener mas de 255 caracteres"}</p>}
-                    <button className={themeLight ? "button-light" : "button-dark"} type="submit"> {english ? button : "Enviar"}</button>
-                </form>
-            </div>
-
-        </section >);
+        </div>
+        <div id="contacto-right">
+            <img src={hombreSonriendo} alt="contacto"/>
+        </div>
+        </div>
+        
+    </section>
+    );
 }
 
 export default Contact;

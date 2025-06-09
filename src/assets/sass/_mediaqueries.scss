@@ -34,27 +34,19 @@
         }
     }
 
-    #contact {
-        height: auto;
-        #contact-title{
-            text-align: center;
+    #contacto{
+        #contacto-container{
+        #contacto-left{
+            width: 100%;
+            h4{
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
         }
-        #contact-container {
-            flex-direction: column;
-
-            #contact-information {
-                width: 100%;
-                height: 30%;
-            }
-
-            #contact-form {
-                width: 100%;
-                height: 70%;
-
-                button {
-                    width: 100%;
-                }
-            }
+        #contacto-right {
+                display: none;
+        }
         }
     }
 
