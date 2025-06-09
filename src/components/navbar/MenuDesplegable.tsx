@@ -11,13 +11,13 @@ function MenuDesplegable() {
     const { button1, button2, button3, button4 } = languageDictionary.nav
     const { themeLight } = useContext(ThemeContext)
 
-    return (<section id="menu" style={themeLight ? { backgroundColor: "white" } : { backgroundColor: "#0c1022" }}>
+    return (<section id="menu" className={themeLight ? "menu-light" :"menu-black"}>
         <ul>
-            <li onClick={handleMenuClick} className={themeLight ? "menu-hover-dark" : "menu-hover-light"} > <a href="#">{english ? button1 : "Inicio"}</a></li>
-            <li onClick={handleMenuClick} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a href="#projects">{english ? button2 : "Proyectos"}</a></li>
-            <li onClick={handleMenuClick} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a href="tech-stack">{english ? button3 : "Habilidades"}</a></li>
-            <li onClick={handleMenuClick} className={themeLight ? "menu-hover-dark" : "menu-hover-light"}><a href="contact">{english ? button4 : "Contacto"}</a></li>
-            <div>
+            <li onClick={handleMenuClick} className="menu-hover" > <a href="#">{english ? button1 : "Inicio"}</a></li>
+            <li onClick={handleMenuClick} className="menu-hover"><a href="#projects">{english ? button2 : "Proyectos"}</a></li>
+            <li onClick={handleMenuClick} className="menu-hover"><a href="tech-stack">{english ? button3 : "Habilidades"}</a></li>
+            <li onClick={handleMenuClick} className="menu-hover"    ><a href="contact">{english ? button4 : "Contacto"}</a></li>
+            <div id="menu-icons">
                 <div> <ChangeLanguage /></div>
                 <div><ChangeTheme /></div>
 

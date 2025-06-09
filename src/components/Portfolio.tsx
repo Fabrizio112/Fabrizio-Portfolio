@@ -1,7 +1,6 @@
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import NavBar from "./navbar/NavBar";
-import TechStack from "./skills/TechStack"
 import Projects from "./projects/Projects";
 import Contact from "./contact/Contact";
 import MenuDesplegable from "./navbar/MenuDesplegable";
@@ -17,7 +16,6 @@ function Portfolio() {
             {menuClick && <MenuDesplegable />}
             <Header />
             <Projects />
-            <TechStack />
             <Contact />
             <Footer />
         </div>

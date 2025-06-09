@@ -5,11 +5,12 @@
     padding: 0;
 }
 
-$background-color_black-theme: #0c1022;
+$background-color_black-theme: #1C1C1C;
 $color_black-theme: #fff;
 $font-size-main_title: 3rem;
 $font-size-titles: 2.5rem;
 $font-size-subtitles: 1.2rem;
+$color-secondary:#FF6F61;
 
 
 html {
@@ -74,15 +75,15 @@ h4 {
     color: white !important;
 }
 
-.button-dark {
-    background-color: white;
-    color: black;
+.button-header {
+    background-color:$color-secondary;;
+    color: white;
+    font-weight: 800;
+    &:hover{
+        background-color:#fa5c4e !important;
+    }
 }
 
-.button-light {
-    background-color: black;
-    color: white;
-}
 
 .inputs-dark {
     border: 1px solid transparent;
@@ -132,7 +133,6 @@ h4 {
     width: 100%;
     height: 100%;
     top: 15vh;
-    background-color: #0c1022;
     z-index: 1;
 
     ul {
@@ -146,13 +146,16 @@ h4 {
         font-size: 2rem;
 
         li {
-            width: 100%;
+            width: 90%;
             padding: 1rem;
             text-align: center;
 
             &:hover {
                 cursor: pointer;
 
+            }
+            a{
+                text-decoration: none;
             }
         }
 
@@ -166,16 +169,49 @@ h4 {
     }
 }
 
-.menu-hover-light:hover {
-    background-color: #ffffff5e;
-    font-weight: 900;
-    transform: scale(1.2);
+.menu-black{
+    background-color: $background-color_black-theme;
+    ul{
+        li{
+            a{
+                color: white;
+            }
+        }
+    }
+}
+.menu-light{
+    background-color: white;
+    ul{
+        li{
+            a{
+                color: black;
+            }
+        }
+    }
 }
 
-.menu-hover-dark:hover {
-    background-color: #00000082;
-    font-weight: 900;
-    transform: scale(1.2);
+
+.menu-hover{
+    &:hover{
+        font-weight: 900;
+        transform: scale(1.2);
+        a{
+            color:$color-secondary;
+        }
+    }
+   
+}
+
+#menu-icons{
+    div{
+        svg{
+            &:hover{
+            path{
+                fill:$color-secondary;
+            }
+            }
+        }
+}
 }
 
 .hover:hover {
