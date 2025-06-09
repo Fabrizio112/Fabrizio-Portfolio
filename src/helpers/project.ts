@@ -23,8 +23,8 @@ export const projectsData : ProjectDataType[] = [
             id:1,
             title: "App de Control de Gastos",
             description: "Aplicacion de control de gastos que permite al usuario registrar sus gastos y asi tener un control sobre el presupuesto que posee",
-            github: "",
-            link: "",
+            github: "https://github.com/Fabrizio112/proyects-curso-ts/tree/main/control-gastos-context",
+            link: "https://app-presupuesto-fabri.netlify.app/",
             image:appControlGastos,
             technologies: [
                 {
@@ -53,8 +53,8 @@ export const projectsData : ProjectDataType[] = [
             id:2,
             title: "App de Seguimiento de Pacientes",
             description: "Aplicacion de seguimiento de pacientes orientada en una veterinaria que permite cargar al paciente , su cuidador y sus sintomas",
-            github: "https://github.com/Fabrizio112",
-            link: "",
+            github: "https://github.com/Fabrizio112/proyects-curso-ts/tree/main/pacientes-zustand",
+            link: "https://pacientes-fabri.netlify.app/",
             image:appVeterinaria,
             technologies: [
                 {
@@ -79,8 +79,8 @@ export const projectsData : ProjectDataType[] = [
             id:3,
             title: "To Do App",
             description: "Proyecto Final para el Curso de Full Stack Codo a Codo .Es una aplicacion web que te permite gestionar las diferentes tareas que agregues y organizar de forma personal estas mismas",
-            github: "https://github.com/Fabrizio112",
-            link: "",
+            github: "https://github.com/Fabrizio112/ToDo-List-FrontEnd",
+            link: "https://todo-fabri.netlify.app/",
             image:appTodo,
             technologies: [
                 {
@@ -109,8 +109,8 @@ export const projectsData : ProjectDataType[] = [
             id:4,
             title: "Crud Usuarios",
             description: "Proyecto Pre Final para el Curso de Full Stack Codo a Codo. Es un CRUD de usuarios",
-            github: "https://github.com/Fabrizio112",
-            link: "",
+            github: "https://github.com/Fabrizio112/Frontend-TPFinal-CaC4.0",
+            link: "https://cac-tp-crud-users.netlify.app/",
             image:appCrud,
             technologies: [
                 {
@@ -143,8 +143,8 @@ export const projectsData : ProjectDataType[] = [
             id:5,
             title: "Smart Shopping",
             description: "Aplicacion de Ecommerce desarrollada para practicar react.Posee diferentes secciones y maneja la logica principal en el carrito de compras.La informacion se obtiene de una Api Externa",
-            github: "https://github.com/Fabrizio112",
-            link: "",
+            github: "https://github.com/Fabrizio112/smart-shopping",
+            link: "https://smart-shopping-dev.netlify.app/",
             image:appSmartShopping,
             technologies: [
                 {
@@ -177,8 +177,8 @@ export const projectsData : ProjectDataType[] = [
             id:6,
             title: "App de Divisas",
             description: "Aplicacion la cual se pueden comparar divisas y calcularlas",
-            github: "https://github.com/Fabrizio112",
-            link: "",
+            github: "https://github.com/Fabrizio112/Divisas-with-RTK",
+            link: "https://divisas-rtk.netlify.app/",
             image:appDivisas,
             technologies: [
                 {
