@@ -10,7 +10,7 @@ import cvEnglish from "../../assets/files/Resume-FabrizioAvila.pdf"
 function Header() {
     const { english, languageDictionary } = useContext(LanguageContext)
     const { themeLight } = useContext(ThemeContext)
-    const { button, description, subtitle, title } = languageDictionary.header
+    const { buttonD,buttonC, description, subtitle, title } = languageDictionary.header
     const descripcion = `El esfuerzo y la dedicación son mis 2 fortalezas.<br/>
     Estudiante de la Tecnicatura en Desarrollo de Sofware y desarrollador autodidacta que esta buscando oportunidades para ganar experiencia y desarrollar mis habilidades/capacidades tanto tecnicas como blandas. Dispuesto siempre a enfrentar desafíos y retos. Disfruto desafiar mis limites y aprender nuevas tecnologías. La curiosidad y la versatilidad son el combustible para día a día aprenda más y más.<br/>
         Mis 2 pasiones: La Tecnología y el Deporte.<br/> Amo el Fútbol`;
@@ -90,8 +90,8 @@ function Header() {
                         </div>
                     </div>
                     <section id="header-buttons" >
-                        <a target="_blank" href={english ? cvEnglish:cv } download={english?"Resume-Fabrizio Avila":"Curriculum Vitae- Fabrizio Avila"} className="button-header" rel="noreferrer">{english ? button : "Curriculum"}</a>
-                        <a href="#contacto"className="button-header" rel="noreferrer">{english ? button : "Contacto"}</a>
+                        <a target="_blank" href={english ? cvEnglish:cv } download={english?"Resume-Fabrizio Avila":"Curriculum Vitae- Fabrizio Avila"} className="button-header" rel="noreferrer">{english ? buttonD : "Curriculum"}</a>
+                        <a href="#contacto"className="button-header" rel="noreferrer">{english ? buttonC : "Contacto"}</a>
                 </section>
                 </main >
             </section>

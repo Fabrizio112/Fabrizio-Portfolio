@@ -10,24 +10,33 @@ export const languageDictionary = {
             subtitle: "FullStack Developer",
             description: `Effort and Consistency are my strengths <br /> Software Development Technicature Student and Self taught developer that is looking for an opportunity to gain experience and grow my technical and soft skills . Always  willing to face challenges and proofs. Enjoy facing my limits and learn new technologies. Curiosity and versatility are the fuel for learning more day to day <br /> My two passions : Technology and Sports .<br/> I love Football. 
             `,
-            button: "Download Resume"
+            buttonD: "Resume",
+            buttonC:"Contact Me"
         },
         projects: {
             title: "My Projects",
             cards: {
                 1: {
-                    title: "Meal App",
-                    description: "Food app that contains diferent categories and into that categories ,have different foods also can see information about each food",
+                    title: "Expenses Control App",
+                    description: "Expenses control application that allows the user to add some expenses and have  control over them",
                 },
                 2: {
-                    title: "Fabri Games",
-                    description: "Pages that contains different classic games maked by me",
+                    title: "Patient Tracking App",
+                    description: "Patient tracking application that is oriented to a veterinarian and allows you to add patient, caregiver and symptoms",
                 },
                 3: {
-                    title: "Smart Shopping",
-                    description: "Ecommerce with different and varied products",
+                    title: "To Do App",
+                    description: "Final Project of the Full Stack Development course. It is a web web that allows you to manage the different tasks you add and organize them",
                 },
                 4: {
+                    title: "Users Crud",
+                    description: "Pre-final project of the Full Stack Development course. It is a crud",
+                },
+                5: {
+                    title: "Smart Shopping",
+                    description: "Ecommerce with different and varied products. Developed to practise react.It has different seccions and handles the main logic in the cart. The information was brought through an API",
+                },
+                6:{
                     title: "Currencies App",
                     description: "App of currencies that can compare and convert currencies",
                 }

@@ -27,6 +27,7 @@
         #project-card {
             position: relative;
             width: 100%;
+            height: 400px;
 
 
             &:hover #project-card_description {
@@ -36,7 +37,7 @@
 
             img {
                 border-radius: 20px;
-                height: 480px;
+                height: 100%;
                 width: 100%;
                 object-fit: cover;
                 transition: filter .2s ease-in-out;
@@ -58,8 +59,11 @@
 
                     a {
                         text-decoration: none;
-                        color: white;
+                        svg{
+                            color: $color-secondary;
+                        }
                     }
+
 
                 }
 
@@ -70,6 +74,7 @@
                     bottom: 1rem;
                     @include flex(column, end, start);
                     margin: 0 2rem;
+                    gap: 0.5rem;
 
                     #project-card_description_information_techs {
                         display: grid;

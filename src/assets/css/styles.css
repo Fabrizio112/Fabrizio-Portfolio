@@ -108,7 +108,7 @@ h4 {
   width: 150px;
   font-weight: 900;
   border: none;
-  background-color: rgba(199, 207, 241, 0.7215686275);
+  background-color: #FF6F61;
   color: white;
 }
 
@@ -346,7 +346,7 @@ header #header-top #header-container #header-text-techs .card-techs span {
   color: grey;
 }
 header #header-top #header-container #header-buttons {
-  width: 40%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -409,6 +409,7 @@ header #header-bottom {
 #projects #projects-container #project-card {
   position: relative;
   width: 100%;
+  height: 400px;
 }
 #projects #projects-container #project-card:hover #project-card_description {
   opacity: 1;
@@ -416,7 +417,7 @@ header #header-bottom {
 }
 #projects #projects-container #project-card img {
   border-radius: 20px;
-  height: 480px;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   transition: filter 0.2s ease-in-out;
@@ -437,7 +438,9 @@ header #header-bottom {
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_links a {
   text-decoration: none;
-  color: white;
+}
+#projects #projects-container #project-card #project-card_description #project-card_description_links a svg {
+  color: #FF6F61;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_information {
   width: 90%;
@@ -449,6 +452,7 @@ header #header-bottom {
   justify-content: end;
   align-items: start;
   margin: 0 2rem;
+  gap: 0.5rem;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_information #project-card_description_information_techs {
   display: grid;
@@ -502,6 +506,7 @@ header #header-bottom {
   align-items: center;
   margin-top: 2rem;
   gap: 1rem;
+  font-style: italic;
 }
 #contacto #contacto-left #contacto-container-rrhh .card-rrhh {
   width: 100%;
@@ -581,6 +586,9 @@ footer {
     align-items: center;
     width: 100%;
   }
+  #header #header-top #header-container #header-buttons {
+    width: 100%;
+  }
   #header h1 {
     font-size: 2.5rem;
     width: 100%;
@@ -589,16 +597,6 @@ footer {
   }
   #header h1 span {
     font-size: 2.8rem;
-  }
-  #header main {
-    width: 100%;
-    height: 60%;
-  }
-  #header main #header-buttons {
-    width: 100%;
-  }
-  #header main #header-social_media {
-    justify-content: center;
   }
   #contacto {
     align-items: center;

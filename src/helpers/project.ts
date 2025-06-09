@@ -1,92 +1,170 @@
-import foodD from "../assets/images/project1/foodD.png"
-import foodT from "../assets/images/project1/foodT.png"
-import foodM from "../assets/images/project1/foodM.png"
+import appControlGastos from "../assets/images/projects/controlGastos.png"
+import appVeterinaria from "../assets/images/projects/seguimientoVet.png"
+import appTodo from "../assets/images/projects/toDoApp.png"
+import appCrud from "../assets/images/projects/crudUsers.png"
+import appSmartShopping from "../assets/images/projects/smartShopping.png"
+import appDivisas from "../assets/images/projects/divisasApp.png"
 
-import gamesD from "../assets/images/project2/gamesD.png"
-import gamesT from "../assets/images/project2/gamesT.png"
-import gamesM from "../assets/images/project2/gamesM.png"
+export type ProjectDataType={
+    id?:number
+    title:string
+    description:string
+    github:string
+    link:string
+    image:string
+    technologies:{
+        text:string
+        id:number
+    }[]
+}
 
-
-import ecommerceD from "../assets/images/project3/ecommerceD.png"
-import ecommerceT from "../assets/images/project3/ecommerceT.png"
-import ecommerceM from "../assets/images/project3/ecommerceM.png"
-
-import divisasD from "../assets/images/project4/divisasD.png"
-import divisasT from "../assets/images/project4/divisasT.png"
-import divisasM from "../assets/images/project4/divisasM.png"
-
-
-export const projectsData = {
-        1: {
-            title: "Aplicación de Comida",
-            description: "Aplicación de comida que posee diferentes categories y dentro de cada categoria hay variedad de alimentos . Se puede ver la diferente información de cada alimento",
-            github: "https://github.com/Fabrizio112/Meal-project",
-            link: "https://meal-app-f.netlify.app",
-            imageD: foodD,
-            imageT: foodT,
-            imageM: foodM,
+export const projectsData : ProjectDataType[] = [
+        {
+            id:1,
+            title: "App de Control de Gastos",
+            description: "Aplicacion de control de gastos que permite al usuario registrar sus gastos y asi tener un control sobre el presupuesto que posee",
+            github: "",
+            link: "",
+            image:appControlGastos,
             technologies: [
                 {
-                    text: "HTML",
+                    text: "Tailwind",
                     id: 0
                 },
                 {
-                    text: "CSS",
+                    text: "TypeScript",
                     id: 1
                 },
                 {
-                    text: "JavaScript",
+                    text: "React",
                     id: 2
                 },
                 {
-                    text: "React",
+                    text: "Context API",
                     id: 3
                 },
                 {
-                    text: "Sass",
+                    text: "use Reducer",
+                    id: 4
+                }
+            ]
+        },
+        {
+            id:2,
+            title: "App de Seguimiento de Pacientes",
+            description: "Aplicacion de seguimiento de pacientes orientada en una veterinaria que permite cargar al paciente , su cuidador y sus sintomas",
+            github: "https://github.com/Fabrizio112",
+            link: "",
+            image:appVeterinaria,
+            technologies: [
+                {
+                    text: "Tailwind",
+                    id: 0
+                },
+                {
+                    text: "TypeScript",
+                    id: 1
+                },
+                {
+                    text: "React",
+                    id: 2
+                },
+                {
+                    text: "Zustand",
+                    id: 3
+                }
+            ]
+        },
+        {
+            id:3,
+            title: "To Do App",
+            description: "Proyecto Final para el Curso de Full Stack Codo a Codo .Es una aplicacion web que te permite gestionar las diferentes tareas que agregues y organizar de forma personal estas mismas",
+            github: "https://github.com/Fabrizio112",
+            link: "",
+            image:appTodo,
+            technologies: [
+                {
+                    text: "JavaScript",
+                    id: 0
+                },
+                {
+                    text: "Vue",
+                    id: 1
+                },
+                {
+                    text: "Python",
+                    id: 2
+                },
+                {
+                    text: "Flask",
+                    id: 3
+                },
+                {
+                    text: "MySQL",
+                    id: 4
+                }
+            ]
+        },
+        {
+            id:4,
+            title: "Crud Usuarios",
+            description: "Proyecto Pre Final para el Curso de Full Stack Codo a Codo. Es un CRUD de usuarios",
+            github: "https://github.com/Fabrizio112",
+            link: "",
+            image:appCrud,
+            technologies: [
+                {
+                    text: "JavaScript",
+                    id: 0
+                },
+                {
+                    text: "Vue",
+                    id: 1
+                },
+                {
+                    text: "Python",
+                    id: 2
+                },
+                {
+                    text: "Flask",
+                    id: 3
+                },
+                {
+                    text: "MySQL",
                     id: 4
                 },
                 {
                     text: "Bootstrap",
                     id: 5
+                }
+            ]
+        },
+        {
+            id:5,
+            title: "Smart Shopping",
+            description: "Aplicacion de Ecommerce desarrollada para practicar react.Posee diferentes secciones y maneja la logica principal en el carrito de compras.La informacion se obtiene de una Api Externa",
+            github: "https://github.com/Fabrizio112",
+            link: "",
+            image:appSmartShopping,
+            technologies: [
+                {
+                    text: "Sass",
+                    id: 0
+                },
+                {
+                    text: "JavaScript",
+                    id: 1
+                },
+                {
+                    text: "React",
+                    id: 2
                 },
                 {
                     text: "Context Api",
-                    id: 6
-                },
-                {
-                    text: "React Router",
-                    id: 7
-                }
-            ]
-        },
-        2: {
-            title: "Fabri Juegos",
-            description: "Pagina donde se encuentran diferentes juegos realizados por mi ",
-            github: "https://github.com/Fabrizio112/Games",
-            link: "https://fabri-games.netlify.app/",
-            imageD: gamesD,
-            imageT: gamesT,
-            imageM: gamesM,
-            technologies: [
-                {
-                    text: "HTML",
-                    id: 0
-                },
-                {
-                    text: "CSS",
-                    id: 1
-                },
-                {
-                    text: "JavaScript",
-                    id: 2
-                },
-                {
-                    text: "React",
                     id: 3
                 },
                 {
-                    text: "Sass",
+                    text: "use Reducer",
                     id: 4
                 },
                 {
@@ -95,88 +173,38 @@ export const projectsData = {
                 }
             ]
         },
-        3: {
-            title: "Smart Shopping",
-            description: "Ecommerce de Productos Variados",
-            github: "https://github.com/Fabrizio112/smart-shopping",
-            link: "https://smart-shopping-dev.netlify.app",
-            imageD: ecommerceD,
-            imageT: ecommerceT,
-            imageM: ecommerceM,
-            technologies: [
-                {
-                    text: "HTML",
-                    id: 0
-                },
-                {
-                    text: "CSS",
-                    id: 1
-                },
-                {
-                    text: "JavaScript",
-                    id: 2
-                },
-                {
-                    text: "React",
-                    id: 3
-                },
-                {
-                    text: "Sass",
-                    id: 4
-                },
-                {
-                    text: "React Router",
-                    id: 5
-                }
-            ]
-        },
-        4: {
-            title: "Calcular y Comparar Divisas",
+         {
+            id:6,
+            title: "App de Divisas",
             description: "Aplicacion la cual se pueden comparar divisas y calcularlas",
-            github: "https://github.com/Fabrizio112/Divisas",
-            link: "https://divisas-currencies.netlify.app/",
-            imageD: divisasD,
-            imageT: divisasT,
-            imageM: divisasM,
+            github: "https://github.com/Fabrizio112",
+            link: "",
+            image:appDivisas,
             technologies: [
                 {
-                    text: "HTML",
-                    id: 0
-                },
-                {
-                    text: "CSS",
-                    id: 1
-                },
-                {
-                    text: "JavaScript",
-                    id: 2
-                },
-                {
-                    text: "React",
-                    id: 3
-                },
-                {
                     text: "Sass",
-                    id: 4
-                },
-                {
-                    text: "React Router",
-                    id: 5
-                },
-                {
-                    text: "React Redux",
-                    id: 6
-                },
-                {
-                    text: "React Query",
-                    id: 7
+                    id: 0
                 },
                 {
                     text: "Bootstrap",
-                    id: 8
+                    id: 1
+                },
+                {
+                    text: "React",
+                    id: 2
+                },
+                {
+                    text: "Redux",
+                    id: 3
+                },
+                {
+                    text: "React Query",
+                    id: 4
+                },
+                {
+                    text: "React Router",
+                    id: 5
                 }
             ]
         }
-    } as const;
-
-export type ProjetDataType = typeof projectsData
+ ];
