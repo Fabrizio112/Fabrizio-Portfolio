@@ -1,0 +1,111 @@
+#experience{
+    width: 100%;
+    min-height: 80vh;
+    h4{
+        position: relative;
+        display: inline-block;
+         &::before{
+                content: "";
+                position: absolute;
+                bottom:2rem;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: $color-secondary;
+                z-index: 1;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: transform 0.3s ease-in-out;
+            }
+    }
+    #experience-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .experience-card{
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 1.5rem;
+            h3{
+                padding: 1rem 0;
+                font-size: 1.5rem;
+            }
+            .experience-card-top{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        background-color: $color-secondary;
+                        padding: 0.5rem 1rem;
+                        border-radius: 10px;
+                        font-size: 1rem;
+                        text-align: center;
+                    }
+                }
+               p{
+                font-weight: 200;
+               }
+            }
+            .experience-card-middle{
+                h5{
+                    font-size: 1.3rem;
+                    padding: 1rem 0;
+                    font-weight: 400;
+                }
+                ul{
+                    padding: 0 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+                    font-weight: 300;
+                }
+            }
+            .experience-card-bottom{
+                @include flex(column,center,start);
+                gap: 1rem;
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    width: 100%;
+                    height: auto;
+                    span{
+                        text-align: center;
+                        border-radius: 10px;
+                        border : 1px solid $color-secondary;
+                        padding: 0.5rem 1rem;
+                        font-size: 15px;
+                        transition: all 0.1s ease-in-out;
+                        user-select: none;
+                        &:hover{
+                            background-color: $color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card-black{
+    border: 1px solid white;
+}
+.card-light{
+    border: 1px solid black;
+}
