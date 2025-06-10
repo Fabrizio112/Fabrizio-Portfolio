@@ -761,9 +761,11 @@ footer {
     margin-bottom: 1rem;
   }
   #contacto #contacto-container #contacto-left #contacto-container-rrhh .card-rrhh {
-    height: 3rem;
     gap: 0;
     padding: 1rem;
+  }
+  #contacto #contacto-container #contacto-left #contacto-container-rrhh .card-rrhh svg {
+    height: 3rem;
   }
   #contacto #contacto-container #contacto-right {
     display: none;
