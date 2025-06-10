@@ -1,4 +1,8 @@
 @media (max-width:768px) {
+    .container{
+        margin: 0;
+        padding: 0 1.5rem;
+    }
     nav {
         section {
             ul {
@@ -11,6 +15,11 @@
         margin-top: 15px;
         #header-top{
             flex-direction: column;
+            .imagen-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             #header-container{
                 align-items: center;
                 width: 100%;

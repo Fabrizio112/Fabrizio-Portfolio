@@ -711,6 +711,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0 1.5rem;
+  }
   nav section ul {
     display: none;
   }
@@ -719,6 +723,11 @@ footer {
   }
   #header #header-top {
     flex-direction: column;
+  }
+  #header #header-top .imagen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #header #header-top #header-container {
     align-items: center;
