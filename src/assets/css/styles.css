@@ -47,6 +47,7 @@ h4 {
 .container {
   margin: 0 2rem;
   position: relative;
+  width: 100%;
 }
 
 .light {
@@ -436,6 +437,7 @@ header #header-bottom {
   flex-direction: column;
   justify-content: center;
   align-items: start;
+  width: 100%;
   gap: 1.5rem;
 }
 #experience #experience-container .experience-card h3 {
