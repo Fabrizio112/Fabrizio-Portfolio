@@ -6,6 +6,7 @@ import Contact from "./contact/Contact";
 import MenuDesplegable from "./navbar/MenuDesplegable";
 import ModalMessage from "./ModalMessage";
 import { usePortfolioStore } from "../store/store";
+import Experience from "./experience/Experience";
 
 function Portfolio() {
     const menuClick=usePortfolioStore(state=>state.menuClick)
@@ -16,6 +17,7 @@ function Portfolio() {
             {menuClick && <MenuDesplegable />}
             <Header />
             <Projects />
+            <Experience/>            
             <Contact />
             <Footer />
         </div>

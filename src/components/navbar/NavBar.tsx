@@ -21,6 +21,7 @@ function NavBar() {
             <ul>
                 <li><a href="#">{english ? button1 : "Inicio"}</a></li>
                 <li><a href="#projects" >{english ? button2 : "Proyectos"}</a></li>
+                <li><a href="#experience" >{english ? button3 : "Experiencia"}</a></li>
                 <li><a href="#contacto">{english ? button4 : "Contacto"}</a></li>
                 <li className="icon-nav"><ChangeLanguage /></li>
                 <li className="icon-nav"><ChangeTheme /></li>
