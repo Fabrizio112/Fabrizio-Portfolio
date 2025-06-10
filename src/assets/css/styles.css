@@ -493,6 +493,7 @@ header #header-bottom {
   align-items: center;
   gap: 1rem;
   width: 100%;
+  flex-wrap: wrap;
   height: auto;
 }
 #experience #experience-container .experience-card .experience-card-bottom div span {
