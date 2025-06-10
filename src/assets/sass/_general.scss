@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-$background-color_black-theme: #1C1C1C;
+$background-color_black-theme: #141921;
 $color_black-theme: #fff;
 $font-size-main_title: 3rem;
 $font-size-titles: 2.5rem;
@@ -62,6 +62,21 @@ h4 {
     background-color: #fff !important;
     color: black !important;
 }
+.nav-light {
+    background-color: #fff;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+}
+.nav-black{
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
 
 .color-light {
     color: white;
@@ -105,12 +120,26 @@ h4 {
     }
 }
 
-.hover-img-dark:hover img {
-    filter: brightness(0.1)
+.hover-img-dark{
+    &:hover{
+        box-shadow: 1px 1px 9px white;
+        border-radius: 20px;
+        img{
+            filter: brightness(0.1)
+        }
+    }
+    
 }
 
-.hover-img-light:hover img {
-    filter: opacity(0.2) blur(2px);
+.hover-img-light{
+    &:hover{
+        box-shadow: 1px 1px 9px black;
+        border-radius: 20px;
+        img{
+            filter: opacity(0.2) blur(2px);
+        }
+    }
+    
 }
 
 .btn-project {

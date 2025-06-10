@@ -10,7 +10,7 @@ html {
 }
 
 #root {
-  background-color: #1C1C1C;
+  background-color: #141921;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -54,6 +54,19 @@ h4 {
   color: black !important;
 }
 
+.nav-light {
+  background-color: #fff;
+}
+.nav-light a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-black a {
+  text-decoration: none;
+  color: white;
+}
+
 .color-light {
   color: white;
 }
@@ -93,10 +106,18 @@ h4 {
   border: 1px solid black;
 }
 
+.hover-img-dark:hover {
+  box-shadow: 1px 1px 9px white;
+  border-radius: 20px;
+}
 .hover-img-dark:hover img {
   filter: brightness(0.1);
 }
 
+.hover-img-light:hover {
+  box-shadow: 1px 1px 9px black;
+  border-radius: 20px;
+}
 .hover-img-light:hover img {
   filter: opacity(0.2) blur(2px);
 }
@@ -153,7 +174,7 @@ h4 {
 }
 
 .menu-black {
-  background-color: #1C1C1C;
+  background-color: #141921;
 }
 .menu-black ul li a {
   color: white;

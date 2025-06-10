@@ -16,13 +16,12 @@ function NavBar() {
     const { themeLight } = useContext(ThemeContext)
 
     return (<nav>
-        <section className={themeLight ? "light" : ""}>
-            <a href="" id="logo" style={themeLight ? { color: "black" } : { color: "white" }}>&lt;fabri.dev/&gt;</a>
+        <section className={themeLight ? "nav-light" : "nav-black"}>
+            <a href="" id="logo">&lt;fabri.dev/&gt;</a>
             <ul>
-                <li><a href="#" style={themeLight ? { color: "black" } : { color: "white" }}>{english ? button1 : "Inicio"}</a></li>
-                <li><a href="#projects" style={themeLight ? { color: "black" } : { color: "white" }}>{english ? button2 : "Proyectos"}</a></li>
-                <li><a href="#tech-stack" style={themeLight ? { color: "black" } : { color: "white" }}>{english ? button3 : "Habilidades"}</a></li>
-                <li><a href="#contacto" style={themeLight ? { color: "black" } : { color: "white" }}>{english ? button4 : "Contacto"}</a></li>
+                <li><a href="#">{english ? button1 : "Inicio"}</a></li>
+                <li><a href="#projects" >{english ? button2 : "Proyectos"}</a></li>
+                <li><a href="#contacto">{english ? button4 : "Contacto"}</a></li>
                 <li className="icon-nav"><ChangeLanguage /></li>
                 <li className="icon-nav"><ChangeTheme /></li>
             </ul>
