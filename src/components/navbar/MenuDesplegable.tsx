@@ -16,7 +16,7 @@ function MenuDesplegable() {
             <li onClick={handleMenuClick} className="menu-hover" > <a href="#">{english ? button1 : "Inicio"}</a></li>
             <li onClick={handleMenuClick} className="menu-hover"><a href="#projects">{english ? button2 : "Proyectos"}</a></li>
             <li onClick={handleMenuClick} className="menu-hover"><a href="#experience">{english ? button3 : "Experiencia"}</a></li>
-            <li onClick={handleMenuClick} className="menu-hover"    ><a href="contact">{english ? button4 : "Contacto"}</a></li>
+            <li onClick={handleMenuClick} className="menu-hover"><a href="#contacto">{english ? button4 : "Contacto"}</a></li>
             <div id="menu-icons">
                 <div> <ChangeLanguage /></div>
                 <div><ChangeTheme /></div>

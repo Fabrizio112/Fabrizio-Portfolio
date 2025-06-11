@@ -140,7 +140,7 @@ h4 {
 
 #menu {
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 100%;
   top: 15vh;
   z-index: 1;
@@ -542,6 +542,7 @@ header #header-bottom {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(510px, 1fr));
   place-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 #projects #projects-container #project-card {
