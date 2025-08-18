@@ -4,8 +4,8 @@ import { useContext } from "react";
 import LanguageContext from "../../context/LanguageContext";
 import ThemeContext from "../../context/ThemeContext";
 import fabri from "../../assets/images/fabri-portfolio.jpg"
-import cv from "../../assets/files/CurriculumVitae-FabrizioAvila.pdf"
-import cvEnglish from "../../assets/files/Resume-FabrizioAvila.pdf"
+import cv from "../../assets/files/CurriculumVitae-FabrizioAvila-IT.pdf"
+import cvEnglish from "../../assets/files/Resume-FabrizioAvila-IT.pdf"
 
 function Header() {
     const { english, languageDictionary } = useContext(LanguageContext)
