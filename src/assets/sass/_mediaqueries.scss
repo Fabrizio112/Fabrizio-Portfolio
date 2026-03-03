@@ -1,8 +1,10 @@
+@use "index" as *;
 @media (max-width:768px) {
-    .container{
+    .container {
         margin: 0;
         padding: 0 1.5rem;
     }
+
     nav {
         section {
             ul {
@@ -13,21 +15,26 @@
 
     #header {
         margin-top: 15px;
-        #header-top{
+
+        #header-top {
             flex-direction: column;
-            .imagen-container{
+
+            .imagen-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            #header-container{
+
+            #header-container {
                 align-items: center;
                 width: 100%;
+
                 #header-buttons {
                     width: 100%;
                 }
             }
         }
+
         h1 {
             font-size: 2.5rem;
             width: 100%;
@@ -39,45 +46,52 @@
             }
         }
 
-        
-           
+
+
     }
 
-    #contacto{
+    #contacto {
         align-items: center;
-        h4{
+
+        h4 {
             width: 100%;
             text-align: center;
         }
-        #contacto-container{
-        #contacto-left{
-            width: 100%;
-            h4{
-                text-align: center;
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-            #contacto-container-rrhh{
-                .card-rrhh{
-                    gap: 0;
-                    padding: 1rem;
-                    svg{
-                        height: 3rem;
+
+        #contacto-container {
+            #contacto-left {
+                width: 100%;
+
+                h4 {
+                    text-align: center;
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+
+                #contacto-container-rrhh {
+                    .card-rrhh {
+                        gap: 0;
+                        padding: 1rem;
+
+                        svg {
+                            height: 3rem;
+                        }
                     }
                 }
             }
-        }
-        #contacto-right {
+
+            #contacto-right {
                 display: none;
-        }
+            }
         }
     }
 
     #projects {
-        h4{
+        h4 {
             width: 100%;
             text-align: center;
         }
+
         #projects-container {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
@@ -92,15 +106,18 @@
             }
         }
     }
-    #experience{
-        h4{
+
+    #experience {
+        h4 {
             width: 100%;
             text-align: center;
         }
     }
+
     .btn-project {
         width: 90px;
     }
+
     #menu {
         ul {
             height: 10%;
@@ -120,9 +137,9 @@
     }
 }
 
-@media(max-width:500px){
-    #header{
-        div{
+@media(max-width:500px) {
+    #header {
+        div {
             max-width: 300px;
         }
     }

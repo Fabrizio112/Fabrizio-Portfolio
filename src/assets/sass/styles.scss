@@ -1,16 +1,9 @@
-@mixin flex($direction, $justify, $align) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@import "general";
-@import "navbar";
-@import "header";
-@import "experience";
-@import "projects";
-@import "contact";
-@import "footer";
-@import "mediaqueries";
-@import "modal";
+@use "navbar";
+@use "header";
+@use "experience";
+@use "projects";
+@use "contact";
+@use "footer";
+@use "mediaqueries";
+@use "modal";
+@use "general";

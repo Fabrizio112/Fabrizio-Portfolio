@@ -1,3 +1,5 @@
+@use "index" as *;
+
 nav {
     height: 15vh;
     width: 100%;
@@ -61,11 +63,12 @@ nav {
                     transform: scale(1.2);
                 }
             }
-            .icon-nav{
-                &:hover{
-                    svg{
-                        path{
-                            fill:$color-secondary;
+
+            .icon-nav {
+                &:hover {
+                    svg {
+                        path {
+                            fill: $color-secondary;
                         }
                     }
                 }

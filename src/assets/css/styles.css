@@ -460,6 +460,7 @@ header #header-bottom {
   border-radius: 10px;
   font-size: 1rem;
   text-align: center;
+  font-weight: 800;
 }
 #experience #experience-container .experience-card .experience-card-top p {
   font-weight: 200;
@@ -633,7 +634,8 @@ header #header-bottom {
   width: 100%;
   height: 80%;
 }
-#contacto #contacto-container #contacto-left, #contacto #contacto-container #contacto-right {
+#contacto #contacto-container #contacto-left,
+#contacto #contacto-container #contacto-right {
   width: 50%;
   height: 100%;
 }

@@ -1,81 +1,94 @@
-#contacto{
+@use "index" as *;
+
+#contacto {
     min-height: 80vh;
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: start;
     flex-direction: column;
     color: white;
-    h4{
+
+    h4 {
         position: relative;
         display: inline-block;
-        &::before{
-                    content: "";
-                    position: absolute;
-                    bottom:2rem;
-                    left: 0;
-                    width: 100%;
-                    height: 4px;
-                    background: $color-secondary;
-                    z-index: 1;
-                    transform: scaleX(1);
-                    transform-origin: left;
-                    transition: transform 0.3s ease-in-out;
-                    }   
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: $color-secondary;
+            z-index: 1;
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform 0.3s ease-in-out;
+        }
     }
-    #contacto-container{
+
+    #contacto-container {
         display: flex;
         width: 100%;
         height: 80%;
-        #contacto-left , #contacto-right{
-        width: 50%;
-        height: 100%;
+
+        #contacto-left,
+        #contacto-right {
+            width: 50%;
+            height: 100%;
         }
 
     }
+
     #contacto-left {
-        #contacto-container-rrhh{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2rem;
-        gap: 1rem;
-        font-style: italic;
-            .card-rrhh{
+        #contacto-container-rrhh {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+            font-style: italic;
+
+            .card-rrhh {
                 width: 100%;
                 border-radius: 10px;
                 display: flex;
-                justify-content:start;
+                justify-content: start;
                 gap: 2rem;
                 align-items: center;
                 padding: 1rem 3rem;
                 transition: all 0.3s ease;
                 text-decoration: none;
 
-                svg{
+                svg {
                     height: 5rem;
                     flex-shrink: 0;
                 }
-                &:nth-child(1):hover{
+
+                &:nth-child(1):hover {
                     background-color: #d93d34;
                 }
-                &:nth-child(2):hover{
+
+                &:nth-child(2):hover {
                     background-color: #0a66c2;
                 }
-                &:nth-child(3):hover{
+
+                &:nth-child(3):hover {
                     background-color: #7b11f8;
                 }
             }
         }
     }
-    #contacto-right{
+
+    #contacto-right {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             width: 70%;
             height: 70%;
             object-fit: contain;
@@ -83,22 +96,25 @@
     }
 }
 
-.card-rrhh-light{
+.card-rrhh-light {
     background-color: transparent;
     color: black;
-    border:1px solid black;
-    svg{
-        path{
+    border: 1px solid black;
+
+    svg {
+        path {
             fill: black;
         }
     }
 }
-.card-rrhh-black{
+
+.card-rrhh-black {
     background-color: transparent;
     color: white;
-    border:1px solid white;
-    svg{
-        path{
+    border: 1px solid white;
+
+    svg {
+        path {
             fill: white;
         }
     }
