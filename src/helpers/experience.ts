@@ -1,21 +1,22 @@
-export type experienceType={
-    id:number
-    title:string
-    description:string
-    date:string
-    goals:{
-        point:string
-    }[],
-    technologies:{
-        tech:string
-    }[]
+export type experienceType = {
+  id: number
+  title: string
+  description: string
+  date: string
+  goals: {
+    point: string
+  }[],
+  technologies: {
+    tech: string
+  }[],
+  gitHub: string
 }
 
-export const experience : experienceType[] = [
+export const experience: experienceType[] = [
   {
     id: 1,
-    title: "SISEP - Gestión Deportiva de Clubes (En progreso)",
-    date:"2025 - Proyecto Final",
+    title: "SISEP - Gestión Deportiva de Clubes",
+    date: "2025 - Proyecto Final",
     description:
       "Aplicación web desarrollada como proyecto académico para mejorar la organización interna y la comunicación entre los clubes deportivos y sus socios. El sistema busca centralizar información clave y digitalizar procesos que suelen realizarse de forma manual o desorganizada.",
     goals: [
@@ -43,17 +44,27 @@ export const experience : experienceType[] = [
         tech: "Angular"
       },
       {
+        tech: "TypeScript"
+      },
+      {
         tech: "MySQL"
+      },
+      {
+        tech: "Python"
+      },
+      {
+        tech: "Django"
       },
       {
         tech: "Diseño de sistemas (UML, casos de uso, etc.)"
       }
-    ]
+    ],
+    gitHub: "https://github.com/El-palomar/ElPalomar"
   },
   {
     id: 2,
     title: "ARGBroker Demo ",
-    date:"2024 - Proyecto Final",
+    date: "2024 - Proyecto Final",
     description:
       "Aplicación desarrollada como proyecto integrador del módulo Programador, en la que se simula el funcionamiento básico de un broker en el mercado bursátil argentino. El proyecto fue realizado por el grupo 'Seven' y tiene como objetivo permitir operaciones de compra y venta de acciones en un entorno demo.",
     goals: [
@@ -71,6 +82,7 @@ export const experience : experienceType[] = [
       { tech: "Diagrama de clases UML" },
       { tech: "Modelado de Base de Datos" },
       { tech: "GitHub" }
-    ]
+    ],
+    gitHub: "https://github.com/Grupo-Seven-ISPC/ARGBroker-Demo-Grupo-Seven"
   }
 ];

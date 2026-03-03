@@ -72,6 +72,10 @@ h4 {
   color: white;
 }
 
+.color-dark {
+  color: black;
+}
+
 .hover-light:hover {
   color: black !important;
 }
@@ -439,6 +443,7 @@ header #header-bottom {
   align-items: start;
   width: 100%;
   gap: 1.5rem;
+  position: relative;
 }
 #experience #experience-container .experience-card h3 {
   padding: 1rem 0;
@@ -508,6 +513,12 @@ header #header-bottom {
 }
 #experience #experience-container .experience-card .experience-card-bottom div span:hover {
   background-color: #FF6F61;
+}
+#experience #experience-container .experience-card .experience-card-bottom div .container-github a {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  text-decoration: none;
 }
 
 .card-black {
@@ -786,6 +797,9 @@ footer {
   #experience h4 {
     width: 100%;
     text-align: center;
+  }
+  #experience #experience-container .experience-card .experience-card-bottom .container-github a {
+    position: initial !important;
   }
   .btn-project {
     width: 90px;

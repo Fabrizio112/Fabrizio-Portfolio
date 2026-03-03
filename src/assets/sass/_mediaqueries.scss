@@ -112,6 +112,19 @@
             width: 100%;
             text-align: center;
         }
+
+        #experience-container {
+            .experience-card {
+                .experience-card-bottom {
+                    .container-github {
+                        a {
+
+                            position: initial !important;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .btn-project {

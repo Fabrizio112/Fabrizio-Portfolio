@@ -10,7 +10,7 @@ $color_black-theme: #fff;
 $font-size-main_title: 3rem;
 $font-size-titles: 2.5rem;
 $font-size-subtitles: 1.2rem;
-$color-secondary:#FF6F61;
+$color-secondary: #FF6F61;
 
 
 html {
@@ -63,16 +63,19 @@ h4 {
     background-color: #fff !important;
     color: black !important;
 }
+
 .nav-light {
     background-color: #fff;
-    a{
+
+    a {
         text-decoration: none;
         color: black;
     }
-    
+
 }
-.nav-black{
-    a{
+
+.nav-black {
+    a {
         text-decoration: none;
         color: white;
     }
@@ -81,6 +84,10 @@ h4 {
 
 .color-light {
     color: white;
+}
+
+.color-dark {
+    color: black;
 }
 
 .hover-light:hover {
@@ -92,11 +99,13 @@ h4 {
 }
 
 .button-header {
-    background-color:$color-secondary;;
+    background-color: $color-secondary;
+    ;
     color: white;
     font-weight: 800;
-    &:hover{
-        background-color:#fa5c4e !important;
+
+    &:hover {
+        background-color: #fa5c4e !important;
     }
 }
 
@@ -121,26 +130,28 @@ h4 {
     }
 }
 
-.hover-img-dark{
-    &:hover{
+.hover-img-dark {
+    &:hover {
         box-shadow: 1px 1px 9px white;
         border-radius: 20px;
-        img{
+
+        img {
             filter: brightness(0.1)
         }
     }
-    
+
 }
 
-.hover-img-light{
-    &:hover{
+.hover-img-light {
+    &:hover {
         box-shadow: 1px 1px 9px black;
         border-radius: 20px;
-        img{
+
+        img {
             filter: opacity(0.2) blur(2px);
         }
     }
-    
+
 }
 
 .btn-project {
@@ -184,7 +195,8 @@ h4 {
                 cursor: pointer;
 
             }
-            a{
+
+            a {
                 text-decoration: none;
             }
         }
@@ -199,21 +211,24 @@ h4 {
     }
 }
 
-.menu-black{
+.menu-black {
     background-color: $background-color_black-theme;
-    ul{
-        li{
-            a{
+
+    ul {
+        li {
+            a {
                 color: white;
             }
         }
     }
 }
-.menu-light{
+
+.menu-light {
     background-color: white;
-    ul{
-        li{
-            a{
+
+    ul {
+        li {
+            a {
                 color: black;
             }
         }
@@ -221,27 +236,28 @@ h4 {
 }
 
 
-.menu-hover{
-    &:hover{
+.menu-hover {
+    &:hover {
         font-weight: 900;
         transform: scale(1.2);
-        a{
-            color:$color-secondary;
+
+        a {
+            color: $color-secondary;
         }
     }
-   
+
 }
 
-#menu-icons{
-    div{
-        svg{
-            &:hover{
-            path{
-                fill:$color-secondary;
-            }
+#menu-icons {
+    div {
+        svg {
+            &:hover {
+                path {
+                    fill: $color-secondary;
+                }
             }
         }
-}
+    }
 }
 
 .hover:hover {
