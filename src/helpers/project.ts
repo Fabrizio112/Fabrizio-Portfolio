@@ -24,7 +24,7 @@ export const projectsData: ProjectDataType[] = [
         title: "Adopta Vet",
         description: "Aplicacion de Adopcion de Animales",
         github: "https://github.com/Fabrizio112/adopta-vet",
-        link: "",
+        link: "https://adopta-vet.netlify.app/",
         image: adoptaVet,
         technologies: [
             {
