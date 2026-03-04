@@ -29,8 +29,20 @@ header {
             @include flex(column, center, start);
             gap: 1rem;
 
+            h1 {
+                font-weight: 400;
+                letter-spacing: 2.2px;
+
+                span {
+                    font-weight: 900;
+                }
+            }
+
             h2 {
                 color: $color-secondary;
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                font-weight: 500;
             }
 
             p {
@@ -53,6 +65,7 @@ header {
                     justify-content: center;
                     align-items: center;
                     text-align: center;
+                    gap: 0.5rem;
 
                     &:hover {
                         svg {
@@ -108,6 +121,10 @@ header {
     #header-bottom {
         width: 100%;
         height: 20%;
+
+        p {
+            line-height: 1.6rem;
+        }
 
     }
 

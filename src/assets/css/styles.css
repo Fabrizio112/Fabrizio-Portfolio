@@ -1,5 +1,5 @@
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Satoshi", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -233,7 +233,7 @@ h4 {
 }
 
 .icon-nav:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 nav {
@@ -256,8 +256,9 @@ nav section #logo:hover {
   transform: scale(1.1);
 }
 nav section #logo {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 nav section ul {
   display: flex;
@@ -267,9 +268,13 @@ nav section ul {
   gap: 3rem;
   list-style: none;
 }
+nav section ul li {
+  transition: all 0.2s ease;
+}
 nav section ul li a {
   text-decoration: none;
   position: relative;
+  font-weight: 600;
 }
 nav section ul li a::before {
   content: "";
@@ -282,7 +287,7 @@ nav section ul li a::before {
   z-index: 1;
   transform: scale(0);
   transform-origin: left;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 nav section ul li a:hover {
   cursor: pointer;
@@ -292,7 +297,7 @@ nav section ul li a:hover::before {
   transform: scale(1);
 }
 nav section ul li:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 nav section ul .icon-nav:hover svg path {
   fill: #FF6F61;
@@ -334,8 +339,18 @@ header #header-top #header-container {
   align-items: start;
   gap: 1rem;
 }
+header #header-top #header-container h1 {
+  font-weight: 400;
+  letter-spacing: 2.2px;
+}
+header #header-top #header-container h1 span {
+  font-weight: 900;
+}
 header #header-top #header-container h2 {
   color: #FF6F61;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 header #header-top #header-container p {
   line-height: 28px;
@@ -355,6 +370,7 @@ header #header-top #header-container #header-text-techs .card-techs {
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 header #header-top #header-container #header-text-techs .card-techs:hover svg path {
   fill: #FF6F61 !important;
@@ -395,6 +411,9 @@ header #header-top #header-container #header-buttons a {
 header #header-bottom {
   width: 100%;
   height: 20%;
+}
+header #header-bottom p {
+  line-height: 1.6rem;
 }
 
 .imagen-portfolio-light {
@@ -579,13 +598,13 @@ header #header-bottom {
   transition: opacity visibility 0.2s ease-in-out;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_links {
-  width: 90%;
+  width: 100%;
   height: 20%;
   position: absolute;
   top: 2rem;
   display: flex;
   justify-content: space-between;
-  margin: 0 2rem;
+  padding: 0 2rem;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_links a {
   text-decoration: none;
@@ -594,7 +613,7 @@ header #header-bottom {
   color: #FF6F61;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_information {
-  width: 90%;
+  width: 100%;
   height: 80%;
   position: absolute;
   bottom: 1rem;
@@ -602,7 +621,7 @@ header #header-bottom {
   flex-direction: column;
   justify-content: end;
   align-items: start;
-  margin: 0 2rem;
+  padding: 0 2rem;
   gap: 0.5rem;
 }
 #projects #projects-container #project-card #project-card_description #project-card_description_information #project-card_description_information_techs {

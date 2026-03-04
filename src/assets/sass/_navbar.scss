@@ -19,8 +19,9 @@ nav {
         }
 
         #logo {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.5rem
+            font-family: "JetBrains Mono", monospace;
+            font-size: 1.5rem;
+            font-weight: 500
         }
 
         ul {
@@ -29,9 +30,12 @@ nav {
             list-style: none;
 
             li {
+                transition: all 0.2s ease;
+
                 a {
                     text-decoration: none;
                     position: relative;
+                    font-weight: 600;
 
                     &::before {
                         content: "";
@@ -44,7 +48,7 @@ nav {
                         z-index: 1;
                         transform: scale(0);
                         transform-origin: left;
-                        transition: transform 0.3s ease-in-out;
+                        transition: all 0.2s ease-in-out;
                     }
 
                     &:hover {
@@ -60,7 +64,7 @@ nav {
                 }
 
                 &:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             }
 

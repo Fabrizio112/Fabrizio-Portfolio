@@ -8,8 +8,7 @@ export const languageDictionary = {
     header: {
         title: "Hello, I´m",
         subtitle: "FullStack Developer",
-        description: `Effort and Consistency are my strengths <br /> Software Development Technicature Student and Self taught developer that is looking for an opportunity to gain experience and grow my technical and soft skills . Always  willing to face challenges and proofs. Enjoy facing my limits and learn new technologies. Curiosity and versatility are the fuel for learning more day to day <br /> My two passions : Technology and Sports .<br/> I love Football. 
-            `,
+        description: `Student of Software Development and self-taught developer. I am passionate about solving problems through code and am constantly learning on my own. Today, I am looking for my first job opportunity to continue growing alongside a team and transform that learning into real impact.`,
         buttonD: "Resume",
         buttonC: "Contact Me"
     },

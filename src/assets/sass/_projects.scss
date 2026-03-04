@@ -55,13 +55,13 @@
                 transition: opacity visibility .2s ease-in-out;
 
                 #project-card_description_links {
-                    width: 90%;
+                    width: 100%;
                     height: 20%;
                     position: absolute;
                     top: 2rem;
                     display: flex;
                     justify-content: space-between;
-                    margin: 0 2rem;
+                    padding: 0 2rem;
 
                     a {
                         text-decoration: none;
@@ -75,12 +75,12 @@
                 }
 
                 #project-card_description_information {
-                    width: 90%;
+                    width: 100%;
                     height: 80%;
                     position: absolute;
                     bottom: 1rem;
                     @include flex(column, end, start);
-                    margin: 0 2rem;
+                    padding: 0 2rem;
                     gap: 0.5rem;
 
                     #project-card_description_information_techs {
