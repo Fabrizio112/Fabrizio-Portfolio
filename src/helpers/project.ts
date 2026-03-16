@@ -62,7 +62,7 @@ export const projectsData: ProjectDataType[] = [
         title: "Up Task",
         description: "Aplicacion de gestion de proyectos",
         github: "https://github.com/Fabrizio112/proyects-curso-ts/tree/main/up-task",
-        link: "",
+        link: "https://up-task-fabrizio.netlify.app/",
         image: upTask,
         technologies: [
             {
